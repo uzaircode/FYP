@@ -9,7 +9,7 @@
 .footer {
   display: flex;
   justify-content: space-around;
-  background-color: #1B1B1B;
+  background-color: #1e2525;
   padding-top: 40px;
   padding-bottom: 20px;
   padding-left: 10%;
@@ -39,7 +39,7 @@
 .footer h6 {
   font-size: 16px;
   font-weight: 500;
-  color: #888888;
+  color: #ffffff;
 }
 
 .footer-1 {}
@@ -101,6 +101,7 @@
   max-width: 100% auto;
   display: flex;
   justify-content: center;
+  background-color: #fffefa;
   column-gap: 40px;
 }
 
@@ -135,7 +136,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f3ede9;
+  background-color: #ffffff;
   border-radius: 4px;
   padding: 10px;
 }
@@ -266,5 +267,5 @@ svg {
 }
 
 .openSearchBtn:hover {
-  background: #FFB85F;
+  background-color: #ffffff;
 }

@@ -17,7 +17,7 @@
   <div>
     <h6>Contact Us</h6>
     <a href="faq.php">
-      <p>FAQS</p>
+      <p>Faqs</p>
     </a>
     <a href="contactUs.html">
       <p>contact us</p>

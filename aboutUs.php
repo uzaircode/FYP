@@ -33,9 +33,49 @@
       </div>
 
       <div class="aboutUs-section2">
+        <div style="display:block; margin: auto;">
+          <h2>Designs to make your own</h2>
+          <p>We're an emporium of eclectic designs, curated for you to make <br>wondrously your own. Each and every one can be personalised so <br>it means more, alive in the hands of its maker. A one-off piece of <br>stationery that's as individual as the thoughts, feelings and <br>dreams you'll place on the page.</p>
+        </div>
+        <img src="images/aboutus-image222.jfif" alt="">
 
       </div>
+
+      <div class="aboutUs-section3">
+        <img src="images/aboutus-image3.jfif" alt="">
+
+        <div style="display:block; margin: auto;">
+          <h2>The artistic friends we <br>collaborate with</h2>
+          <p>Alongside our in-house collections, we collaborate with bright,<br> up-and-coming artists, iconic brands and exciting fashion labels.<br> They're all fellow paper people whose varied creative talents<br> bring a magical touch to our stationery.</p>
+        </div>
+
+      </div>
+
+      <div class="aboutUs-section4">
+        <div style="display:block; margin: auto;">
+          <h2>Striving for sustainability</h2>
+          <p>From made-to-order products (which means reduced waste and <br> carbon emissions) to sustainably sourced paper and recyclable <br> packaging, we've made decisions and efforts to lessen our <br> footprint since the very beginning. And we're constantly looking <br> for ways to improve.</p>
+        </div>
+
+        <img src="images/aboutus-image4.jfif" alt="">
+
+      </div>
+
+      <div class="aboutUs-section5">
+
+        <img src="images/aboutus-image5.jfif" alt="">
+
+        <div style="display:block; margin: auto;">
+          <h2>A little bit of paper goes a <br> long way</h2>
+        </div>
+
+
+      </div>
+      
     </section>
+
+
+
 
 
     <?php include("./assets/php/footer.php"); ?>

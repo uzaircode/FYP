@@ -78,11 +78,10 @@ button:hover {
 }
 
 .aboutUs {
-  display: flex;
-  justify-content: center;
   text-align: center;
   padding-bottom: 70px;
   padding-top: 30px;
+  background-color: #faf7f0;
 
 }
 
@@ -116,7 +115,222 @@ button:hover {
   padding-top: 70px;
 }
 
+.aboutUs-section2  {
+  display: flex;
+  margin: auto;
+  margin-top: 112px;
+  justify-content: space-between;
+  height: 624px;
+  width: 1248px;
+  background-color: #f4eee0;
+}
 
+
+.aboutUs-section2 h2 {
+  font-family: self-modern-italic;
+  font-size: 32px;
+  font-weight: lighter;
+  text-align: left;
+  line-height: 80px;
+}
+
+.aboutUs-section2 p {
+  font-size: 14px;
+  text-align: left;
+}
+
+.aboutUs-section3  {
+  display: flex;
+  margin: auto;
+  margin-top: 96px;
+  justify-content: space-between;
+  height: 624px;
+  width: 1248px;
+}
+
+
+.aboutUs-section3 h2 {
+  font-family: self-modern-italic;
+  font-size: 32px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.aboutUs-section3 p {
+  padding-top: 20px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.aboutUs-section4  {
+  display: flex;
+  margin: auto;
+  margin-top: 48px;
+  justify-content: space-between;
+  height: 624px;
+  width: 1248px;
+}
+
+
+.aboutUs-section4 h2 {
+  font-family: self-modern-italic;
+  font-size: 32px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.aboutUs-section4 p {
+  padding-top: 20px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.aboutUs-section5  {
+  display: flex;
+  margin: auto;
+  margin-top: 96px;
+  justify-content: space-between;
+  height: 624px;
+  width: 1248px;
+  background-color: #f4eee0;
+  margin-bottom: 48px;
+}
+
+
+.aboutUs-section5 h2 {
+  font-family: self-modern-italic;
+  font-size: 32px;
+  font-weight: lighter;
+  text-align: left;
+
+}
+
+
+
+.show-btn{
+  padding: 5px 13px;
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.show-btn, .container{
+  background-color: #1e2525;
+
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+.container{
+  position: absolute;
+  display: none;
+  background: #faf7f0;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 360px;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#show:checked ~ .container{
+  display: block;
+}
+
+.container .close-btn{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.container .close-btn:hover{
+  color: #000;
+}
+.container .text{
+  font-family: self-modern-italic;
+  font-size: 32px;
+}
+.container form{
+  margin-top: -20px;
+}
+.container form .data{
+  height: 36px;
+  width: 100%;
+  margin: 40px 0;
+}
+
+form .data span {
+  font-size: 16px;
+  color: #1e2525;
+  font-weight: 600;
+}
+
+form .data input{
+  height: 100%;
+  width: 100%;
+  margin-top: 2px;
+  font-size: 17px;
+  border: 1px solid white;
+}
+form .data input:focus{
+  border-color: orange;
+  border-bottom-width: 2px;
+}
+form .forgot-pass{
+  margin-top: -8px;
+}
+form .forgot-pass a{
+  font-size: 14px;
+  color: #1e2525;
+  text-decoration: underline;
+}
+form .forgot-pass a:hover{
+  text-decoration: underline;
+}
+form .btn{
+  margin: 30px 0;
+  height: 45px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .inner{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  z-index: -1;
+  background-color: #1e2525;
+  transition: all 0.4s;
+}
+form .btn:hover .inner{
+  left: 0;
+}
+form .btn button{
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+form .signup-link{
+  text-align: center;
+}
+form .signup-link a{
+  font-size: 14px;
+  color: #1e2525;
+  text-decoration: underline;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
 
 
 

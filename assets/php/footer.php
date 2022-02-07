@@ -19,13 +19,13 @@
     <a href="faq.php">
       <p>Faqs</p>
     </a>
-    <a href="contactUs.html">
+    <a href="">
       <p>contact us</p>
     </a>
-    <a href="faq.php">
+    <a href="">
       <p>shipping and returns</p>
     </a>
-    <a href="terms-condition.html">
+    <a href="terms-condition.php">
       <p>terms & conditions</p>
     </a>
 
@@ -58,7 +58,7 @@
 
     <div class="footer-menu-bottom">
       <p style="text-decoration:none; cursor:default;">© 2022 Papier</p>
-      <a href="privacy-policy.html">
+      <a href="privacy.php">
         <p>Privacy</p>
       </a>
       <a href="terms-condition.php">

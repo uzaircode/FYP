@@ -151,6 +151,10 @@ button:hover {
   text-align: left;
 }
 
+.test {
+display: flex;
+}
+
 .aboutUs-section3 {
   display: flex;
   margin: auto;
@@ -213,11 +217,26 @@ button:hover {
   text-align: left;
 }
 
-.term-condition-section, .cookies-section {
+.term-condition-section, .cookies-section, .privacy-section {
   background-color: #faf7f0;
 }
 
+.privacy-section {
+  padding-bottom: 40px;
+
+}
+
+.privacy-section li{
+  font-weight: normal;
+}
+
 .term-condition-content {
+  width: 832px;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.privacy-content {
   width: 832px;
   margin: auto;
   padding-bottom: 20px;
@@ -245,6 +264,15 @@ button:hover {
   padding-top: 90px;
 }
 
+.privacy-section h1 {
+  font-family: self-modern-italic;
+  font-size: 32px;
+  font-weight: normal;
+  padding-bottom:35px;
+  padding-top: 90px;
+}
+
+
 .term-condition-section h2 {
   font-family: self-modern-italic;
   font-size: 24px;
@@ -252,6 +280,12 @@ button:hover {
 }
 
 .cookies-section h2 {
+  font-family: self-modern-italic;
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+.privacy-section h2 {
   font-family: self-modern-italic;
   font-size: 24px;
   font-weight: lighter;
@@ -266,6 +300,14 @@ button:hover {
 }
 
 .cookies-section p {
+  font-family: Quarion;
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 20px;
+  padding-top: 10px;
+}
+
+.privacy-section p {
   font-family: Quarion;
   font-size: 14px;
   font-weight: lighter;
@@ -396,6 +438,13 @@ input[type="checkbox"] {
 
 
 .cookies-content h6 {
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.privacy-content h6 {
   margin-top: 20px;
   font-size: 12px;
   letter-spacing: 1px;
@@ -613,6 +662,23 @@ form .signup-link a:hover {
   color: #ffff;
 }
 
+.faq-title {
+  background-color: #faf7f0;
+  margin: auto;
+  max-width: 100% auto;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  background-color: #faf7f0;
+}
+
+
+.faq-title h1{
+  font-family: self-modern-italic;
+  font-size: 32px;
+  font-weight: normal;
+}
+
 .faq-row1 {
   padding-bottom: 30px;
 }
@@ -656,7 +722,7 @@ form .signup-link a:hover {
   padding-top: 40px;
   display: flex;
   justify-content: center;
-  background-color: #faf7f0;
+  background-color: #fffefa;
   column-gap: 40px;
 }
 
@@ -683,7 +749,7 @@ form .signup-link a:hover {
   justify-content: center;
   max-width: 700px;
   margin-top: 10px;
-  border-bottom: 2px solid #f4eee0;
+  border-bottom: 2px solid #faf7f0;
   cursor: pointer;
 }
 
@@ -691,7 +757,7 @@ form .signup-link a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f4eee0;
+  background-color: #faf7f0;
   border-radius: 4px;
   padding: 10px;
 }

@@ -67,7 +67,18 @@
 
 
 
+
+<div class="faq-title">
+  <h1>How can we help you?</h1>
+</div>
+
+
+
     <section class="faq-section faq-row1">
+
+
+
+
 
       <div class="faq-left">
         <p><i class="far fa-edit faq-icons"></i></p>

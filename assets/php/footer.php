@@ -9,7 +9,7 @@
     <a href="aboutUs.php">
       <p>about us</p>
     </a>
-    <a href="guide-me.html">
+    <a href="">
     <p>Sustainability</p>
     </a>
   </div>
@@ -19,10 +19,10 @@
     <a href="faq.php">
       <p>Faqs</p>
     </a>
-    <a href="">
+    <a href="d.html">
       <p>contact us</p>
     </a>
-    <a href="">
+    <a href="d.html">
       <p>shipping and returns</p>
     </a>
     <a href="terms-condition.php">

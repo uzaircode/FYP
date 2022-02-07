@@ -76,10 +76,14 @@ svg {
 }
 
 .nav_links li a:hover {
-  color: #0088a9
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #1e2525;
+
 }
 
-button {
+/* button {
   padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
   border: none;
@@ -90,7 +94,7 @@ button {
 
 button:hover {
   background-color: rgba(0, 136, 169, 0.8);
-}
+} */
 
 .aboutUs {
   text-align: center;
@@ -470,9 +474,16 @@ th, td {
   padding: 15px;
 }
 
-li {
+.cookies-section li {
   font-size: 14px;
   font-weight: 600;
+  margin: 8px 40px 0;
+  color: #1e2525;
+
+}
+
+.privacy-section li {
+  font-size: 14px;
   margin: 8px 40px 0;
   color: #1e2525;
 

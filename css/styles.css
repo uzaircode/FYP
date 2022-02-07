@@ -26,6 +26,21 @@ a {
   color: inherit;
 }
 
+th {
+  font-size: 14px;
+  color: #1e2525;
+  font-weight: 600;
+}
+
+p,td,a {
+  font-size: 14px;
+  color: #1e2525;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: #1e2525;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -198,7 +213,7 @@ button:hover {
   text-align: left;
 }
 
-.term-condition-section {
+.term-condition-section, .cookies-section {
   background-color: #faf7f0;
 }
 
@@ -206,6 +221,12 @@ button:hover {
   width: 832px;
   margin: auto;
   padding-bottom: 20px;
+}
+
+.cookies-content {
+  width: 832px;
+  margin: auto;
+  padding-bottom: 40px;
 }
 
 .term-condition-section h1 {
@@ -216,13 +237,35 @@ button:hover {
   padding-top: 90px;
 }
 
+.cookies-section h1 {
+  font-family: self-modern-italic;
+  font-size: 32px;
+  font-weight: normal;
+  padding-bottom:35px;
+  padding-top: 90px;
+}
+
 .term-condition-section h2 {
   font-family: self-modern-italic;
   font-size: 24px;
   font-weight: lighter;
 }
 
+.cookies-section h2 {
+  font-family: self-modern-italic;
+  font-size: 24px;
+  font-weight: lighter;
+}
+
 .term-condition-section p {
+  font-family: Quarion;
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 20px;
+  padding-top: 10px;
+}
+
+.cookies-section p {
   font-family: Quarion;
   font-size: 14px;
   font-weight: lighter;
@@ -347,7 +390,24 @@ input[type="checkbox"] {
 } */
 
 
+
+
+
+
+
+.cookies-content h6 {
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+
+
+
+/* TABLE IN COOKIES PAGE  */
 table, td, th {
+  margin: 31px 0;
   border: 1px solid #ddd;
   text-align: left;
 }
@@ -360,6 +420,32 @@ table {
 th, td {
   padding: 15px;
 }
+
+li {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 8px 40px 0;
+  color: #1e2525;
+
+}
+
+/* TABLE IN COOKIES PAGE  END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -525,10 +611,6 @@ form .signup-link a:hover {
 
 .fab {
   color: #ffff;
-}
-
-.fab:hover {
-  font-size: 22px;
 }
 
 .faq-row1 {

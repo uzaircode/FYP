@@ -50,21 +50,21 @@
 
   <div class="footer-bottom">
     <div class="icon-footer">
-      <a href="https://www.facebook.com/TelekungSitiKhadijah" target="_blank"><i class="fab fa-facebook-square"></i></a>
-      <a href="https://twitter.com/TelekungSK" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.youtube.com/user/sitikhadijahapparel" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.instagram.com/telekung.sitikhadijah/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/papieruk/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://www.instagram.com/papier/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.pinterest.co.uk/papieruk/" target="_blank"><i class="fab fa-pinterest"></i></a>
+      <a href="https://twitter.com/papieruk" target="_blank"><i class="fab fa-twitter"></i></a>
     </div>
 
     <div class="footer-menu-bottom">
-      <p>© 2022 Papier</p>
+      <p style="text-decoration:none; cursor:default;">© 2022 Papier</p>
       <a href="privacy-policy.html">
         <p>Privacy</p>
       </a>
       <a href="terms-condition.php">
         <p>T & C</p>
       </a>
-      <a href="privacy-policy.html">
+      <a href="cookies.php">
         <p>Cookies</p>
       </a>
     </div>

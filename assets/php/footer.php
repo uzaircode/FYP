@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/styles.css">
+ <link rel="stylesheet" href="css/styles.css">
 
 
 <section class="footer">
@@ -61,7 +61,7 @@
       <a href="privacy-policy.html">
         <p>Privacy</p>
       </a>
-      <a href="terms-condition.html">
+      <a href="terms-condition.php">
         <p>T & C</p>
       </a>
       <a href="privacy-policy.html">

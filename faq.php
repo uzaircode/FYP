@@ -5,12 +5,12 @@
     <title>Faqs</title>
     <link rel="shortcut icon" href="images/mata_kecik.png"/>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 
@@ -20,6 +20,51 @@
   <body>
 
     <?php include("./assets/php/header.php"); ?>
+
+    <body>
+
+    <!-- <label for="show" class="show-btn" onclick="openSearch()" >Log in</label> -->
+
+    <!-- <div id="mylayout">
+      <input type="checkbox" id="show">
+      <div class="container">
+        <label for="show" class="close-btn fas fa-times" title="close" onclick="closeSearch()"></label>
+        <div class="text">
+  Log in</div>
+  <form action="#">
+          <div class="data">
+            <span>Email</span>
+
+            <input type="text" required>
+          </div>
+  <div class="data">
+  <span>Password</span>
+            <input type="password" required>
+          </div>
+  <div class="forgot-pass">
+  <a href="#">Forgotten your password?</a></div>
+  <div class="btn">
+            <div class="inner">
+  </div>
+  <button type="submit">log in</button>
+          </div>
+  <div class="signup-link"><a href="#">Create an account</a></div>
+  </form>
+  </div>
+  </div> -->
+
+  <!-- <div id="popupbox">
+<form name="login" action="" method="post">
+<center>Username:</center>
+<center><input name="username" size="14" /></center>
+<center>Password:</center>
+<center><input name="password" type="password" size="14" /></center>
+<center><input type="submit" name="submit" value="login" /></center>
+</form>
+<br />
+<center><a href="javascript:login('hide');">close</a></center>
+</div> -->
+
 
 
     <section class="faq-section faq-row1">

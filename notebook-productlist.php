@@ -30,8 +30,8 @@
 
 
       <div class="product-list">
-      <div class="product-list-box">
-        <img src="images/notebook-newlife.png" alt="">
+      <div class="product-list-box container">
+        <img class="loading" src="images/buku-testing.jpg" alt="">
         <div style="display: flex; justify-content: space-between;">
           <h5>new life</h5>
           <h5>RM21.99</h5>
@@ -40,7 +40,7 @@
         <p style="color: #3F7427">new in</p>
       </div>
       <div class="product-list-box">
-        <img src="images/notebook-colourblock.png" alt="">
+        <img src="images/buku-testing.jpg" alt="">
         <div style="display: flex; justify-content: space-between;">
           <h5>colorBlock</h5>
           <h5>RM21.99</h5>
@@ -48,7 +48,7 @@
         <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
       </div>
       <div class="product-list-box">
-        <img src="images/notebook-vibrant.png" alt="">
+        <img src="images/buku-testing.jpg" alt="">
         <div style="display: flex; justify-content: space-between;">
           <h5>vibrant</h5>
           <h5>RM21.99</h5>
@@ -57,250 +57,12 @@
         <p style="color: #3F7427">new in</p>
       </div>
       <div class="product-list-box">
-        <img src="images/notebook-fullofheart.png" alt="">
+        <img src="images/buku-testing.jpg" alt="">
         <div style="display: flex; justify-content: space-between;">
           <h5>full of heart</h5>
           <h5>RM21.99</h5>
         </div>
         <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-hellofuture.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>hello future</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-beachtowel.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>beach towel</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-joy.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>joy</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-growth.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>growth</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-newlife.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>new life</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-colourblock.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>colorBlock</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-vibrant.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>vibrant</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-fullofheart.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>full of heart</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-hellofuture.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>hello future</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-beachtowel.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>beach towel</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-joy.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>joy</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-growth.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>growth</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-newlife.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>new life</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-colourblock.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>colorBlock</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-vibrant.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>vibrant</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-fullofheart.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>full of heart</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-hellofuture.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>hello future</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-beachtowel.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>beach towel</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-joy.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>joy</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-growth.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>growth</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-newlife.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>new life</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-colourblock.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>colorBlock</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-vibrant.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>vibrant</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-fullofheart.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>full of heart</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-hellofuture.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>hello future</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-beachtowel.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>beach towel</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-joy.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>joy</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-growth.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h5>growth</h5>
-          <h5>RM21.99</h5>
-        </div>
-        <h5 style="font-weight: lighter; font-size: 15px;">notebook</h5>
-        <p style="color: #3F7427">new in</p>
       </div>
       <!-- <div class="product-list-box">
         <img src="images/notebook-newlife.png" alt="">
@@ -422,7 +184,10 @@
       </div>
 
     </section>
+    <script src="javascript/script.js" ></script>
     <?php include("./assets/php/footer.php"); ?>
+
+
 
 
   </body>

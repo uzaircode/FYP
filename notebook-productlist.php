@@ -24,148 +24,114 @@
     <section class="notebook-section">
 
       <div class="product-list-title">
-        <h1>Notebooks & Journals</h1>
+        <h1>Notebooks & Postcards</h1>
         <p>Pages of potential. Our notebooks are yours to fill with whatever you fancy, from little to-dos to big dreams. How it looks is up to you – pick your print, then choose from lined, dotted or plain paper. Personalise the cover with your name or any words that inspire.</p>
       </div>
 
 
       <div class="product-list">
       <div class="product-list-box">
-        <img src="images/mushroom-notebook.jpg" alt="">
-        <div style="display: flex; justify-content: space-between;">
+        <div class="product-list-details">
+          <img src="images/floral-notebook.jpg" alt="">
+          <div class="overlay" style="background-color:#00ba6d">
+            <div class="text">Floral Burst Notebook</div>
+          </div>
         </div>
       </div>
       <div class="product-list-box">
-        <img src="images/floral-notebook.jpg" alt="">
-        <div style="display: flex; justify-content: space-between;">
+        <div class="product-list-details">
+          <img src="images/mushroom-notebook.jpg" alt="">
+          <div class="overlay" style="background-color:#ff9678">
+            <div class="text">Mushroom Postcards</div>
+          </div>
         </div>
       </div>
       <div class="product-list-box">
-        <img src="images/oranges-notebook.jpg" alt="">
-        <div style="display: flex; justify-content: space-between;">
+        <div class="product-list-details">
+          <img src="images/oranges-notebook.jpg" alt="">
+          <div class="overlay" style="background-color:#192878">
+            <div class="text">Oranges Notebook</div>
+          </div>
         </div>
       </div>
       <div class="product-list-box">
-        <img src="images/mirror2-notebook.jpg" alt="">
-        <div style="display: flex; justify-content: space-between;">
+        <div class="product-list-details">
+          <img src="images/mirror2-notebook.jpg" alt="">
+          <div class="overlay" style="background-color:#ff9678">
+            <div class="text">The Completist | Mirrors Notebook</div>
+          </div>
         </div>
       </div>
       <div class="product-list-box">
-        <img src="images/mirror-notebook.jpg" alt="">
-        <div style="display: flex; justify-content: space-between;">
+        <div class="product-list-details">
+          <img src="images/mirror-notebook.jpg" alt="">
+          <div class="overlay" style="background-color:#192878">
+            <div class="text">The Completist | Mirrors Notebook</div>
+          </div>
         </div>
       </div>
       <div class="product-list-box">
-        <img src="images/memphis-notebook.jpg" alt="">
-        <div style="display: flex; justify-content: space-between;">
+        <div class="product-list-details">
+          <img src="images/memphis-notebook.jpg" alt="">
+          <div class="overlay" style="background-color:#ff9678">
+            <div class="text">The Completist | Memphis Brush</div>
+          </div>
         </div>
       </div>
       <div class="product-list-box">
-        <img src="images/brush-notebook.jpg" alt="">
-        <div style="display: flex; justify-content: space-between;">
+        <div class="product-list-details">
+          <img src="images/brush-notebook.jpg" alt="">
+          <div class="overlay" style="background-color:#dc9b14">
+            <div class="text">The Completist | Giant Brush Notebook</div>
+          </div>
         </div>
       </div>
       <div class="product-list-box">
-        <img src="images/pinkcut-notebook.jpg" alt="">
-        <div style="display: flex; justify-content: space-between;">
+        <div class="product-list-details">
+          <img src="images/pinkcut-notebook.jpg" alt="">
+          <div class="overlay" style="background-color:#fd8899">
+            <div class="text">The Completist | Pink Cut Out Shapes Notebook</div>
+          </div>
         </div>
       </div>
       <div class="product-list-box">
-        <img src="images/vintage-notebook.jpg" alt="">
-        <div style="display: flex; justify-content: space-between;">
+        <div class="product-list-details">
+          <img src="images/vintage-notebook.jpg" alt="">
+          <div class="overlay" style="background-color:#dc9b14">
+            <div class="text">Stalogy 016 Vintage Notebook</div>
+          </div>
         </div>
       </div>
       <div class="product-list-box">
-        <img src="images/lavender-notebook.jpg" alt="">
-        <div style="display: flex; justify-content: space-between;">
+        <div class="product-list-details">
+          <img src="images/lavender-notebook.jpg" alt="">
+          <div class="overlay" style="background-color:#192878">
+            <div class="text">Lavender Notebook</div>
+          </div>
         </div>
       </div>
       <div class="product-list-box">
-        <img src="images/yellow-notebook.jpg" alt="">
-        <div style="display: flex; justify-content: space-between;">
+        <div class="product-list-details">
+          <img src="images/yellow-notebook.jpg" alt="">
+          <div class="overlay" style="background-color:#dc9b14">
+            <div class="text">Yellow Notebook</div>
+          </div>
         </div>
       </div>
       <div class="product-list-box">
-        <img src="images/bluelines-notebook.jpg" alt="">
-        <div style="display: flex; justify-content: space-between;">
+        <div class="product-list-details">
+          <img src="images/bluelines-notebook.jpg" alt="">
+          <div class="overlay" style="background-color:#00ba6d">
+            <div class="text">Blue Lines Notebook</div>
+          </div>
         </div>
-      </div>
-      <!-- <div class="product-list-box">
-        <img src="images/notebook-newlife.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h1>new life</h1>
-          <p>21.99</p>
-        </div>
-        <p>notebook</p>
-        <p>new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-newlife.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h1>new life</h1>
-          <p>21.99</p>
-        </div>
-        <p>notebook</p>
-        <p>new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-newlife.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h1>new life</h1>
-          <p>21.99</p>
-        </div>
-        <p>notebook</p>
-        <p>new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-newlife.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h1>new life</h1>
-          <p>21.99</p>
-        </div>
-        <p>notebook</p>
-        <p>new in</p>
-      </div> -->
-      <!-- <div class="product-list-box">
-        <img src="images/notebook-newlife.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h1>new life</h1>
-          <p>21.99</p>
-        </div>
-        <p>notebook</p>
-        <p>new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-newlife.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h1>new life</h1>
-          <p>21.99</p>
-        </div>
-        <p>notebook</p>
-        <p>new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-newlife.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h1>new life</h1>
-          <p>21.99</p>
-        </div>
-        <p>notebook</p>
-        <p>new in</p>
-      </div>
-      <div class="product-list-box">
-        <img src="images/notebook-newlife.png" alt="">
-        <div style="display: flex; justify-content: space-between;">
-          <h1>new life</h1>
-          <p>21.99</p>
-        </div>
-        <p>notebook</p>
-        <p>new in</p>
-      </div>
       </div>
 
     </section>
+
+
     <?php include("./assets/php/footer.php"); ?>
-
-
   </body>
+
+
+  </html>

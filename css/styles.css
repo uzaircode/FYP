@@ -46,7 +46,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 10%;
-  background-color: #fffefa;
+  background-color: #ffffff;
 }
 
 svg {
@@ -100,7 +100,7 @@ button:hover {
   text-align: center;
   padding-bottom: 70px;
   padding-top: 30px;
-  background-color: #faf7f0;
+  background-color: #fafafa;
 }
 
 .aboutUs h6 {
@@ -222,7 +222,7 @@ display: flex;
 }
 
 .term-condition-section, .cookies-section, .privacy-section {
-  background-color: #faf7f0;
+  background-color: #fafafa;
 }
 
 .privacy-section {
@@ -320,7 +320,7 @@ display: flex;
 }
 
 .notebook-section {
-  background-color: #faf7f0;
+  background-color: #fafafa;
 }
 
 .product-list {
@@ -354,7 +354,13 @@ display: flex;
 }
 
 .product-list-box {
-  padding-bottom: 58px;
+  padding-bottom: 25px;
+}
+
+.product-list-details {
+  position: relative;
+  cursor: pointer;
+  background-color: #dadada;
 }
 
 .product-list-box img {
@@ -364,7 +370,21 @@ display: flex;
   cursor: pointer;
 }
 
-.product-list-box h5 {
+.text {
+  font-family: self-modern-italic;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* .product-list-box h5 {
   font-size: 17px;
   font-weight: 700;
   line-height: 22.4px;
@@ -375,7 +395,36 @@ display: flex;
   font-size: 14px;
   line-height: 18.2px;
   text-transform: capitalize;
+} */
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
 }
+
+.product-list-details:hover .overlay {
+  opacity: 90.0%
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .subscribe-homepage{
   display: flex;
@@ -741,7 +790,6 @@ form .signup-link a:hover {
 }
 
 .faq-title {
-  background-color: #faf7f0;
   margin: auto;
   max-width: 100% auto;
   padding: 100px;

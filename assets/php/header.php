@@ -13,7 +13,7 @@
   <nav>
     <ul class="nav_links">
       <li><a href="aboutUs.php">ABOUT US</a></li>
-      <li><a href="#">NOTEBOOKS</a></li>
+      <li><a href="notebook-productlist.php">NOTEBOOKS</a></li>
       <li><a href="#">STATIONERY</a></li>
       <li><a href="#">WEDDING</a></li>
     </ul>

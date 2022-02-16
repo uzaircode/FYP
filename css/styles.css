@@ -325,8 +325,8 @@ display: flex;
 
 .product-list {
   display: flex;
+  max-width: 2000px;
   justify-content: center;
-  max-width: 1680px;
   column-gap: 28px;
   flex-wrap: wrap;
   column-gap: 35px;
@@ -354,14 +354,14 @@ display: flex;
 }
 
 .product-list-box {
-  width: 320px;
   padding-bottom: 58px;
 }
 
 .product-list-box img {
-  width: 320px;
-  height: 320px;
+  width: 480px;
+  height: 480px;
   background-color: #f4eee0;
+  cursor: pointer;
 }
 
 .product-list-box h5 {

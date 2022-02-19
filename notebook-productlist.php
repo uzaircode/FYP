@@ -33,15 +33,19 @@
       <div class="product-list-box">
         <div class="product-list-details">
           <img src="images/floral-notebook.jpg" alt="">
+          <a href="notebook-productdetails.php">
           <div class="overlay" style="background-color:#00ba6d">
+            <div class="text-price">RM29.90</div>
             <div class="text">Floral Burst Notebook</div>
           </div>
+          </a>
         </div>
       </div>
       <div class="product-list-box">
         <div class="product-list-details">
           <img src="images/mushroom-notebook.jpg" alt="">
           <div class="overlay" style="background-color:#ff9678">
+            <div class="text-price">RM29.90</div>
             <div class="text">Mushroom Postcards</div>
           </div>
         </div>
@@ -50,6 +54,7 @@
         <div class="product-list-details">
           <img src="images/oranges-notebook.jpg" alt="">
           <div class="overlay" style="background-color:#192878">
+            <div class="text-price">RM29.90</div>
             <div class="text">Oranges Notebook</div>
           </div>
         </div>
@@ -58,7 +63,8 @@
         <div class="product-list-details">
           <img src="images/mirror2-notebook.jpg" alt="">
           <div class="overlay" style="background-color:#ff9678">
-            <div class="text">The Completist | Mirrors Notebook</div>
+            <div class="text-price">RM29.90</div>
+            <div class="text">The Completist - Mirrors Notebook</div>
           </div>
         </div>
       </div>
@@ -66,7 +72,8 @@
         <div class="product-list-details">
           <img src="images/mirror-notebook.jpg" alt="">
           <div class="overlay" style="background-color:#192878">
-            <div class="text">The Completist | Mirrors Notebook</div>
+            <div class="text-price">RM29.90</div>
+            <div class="text">The Completist - Mirrors Notebook</div>
           </div>
         </div>
       </div>
@@ -74,7 +81,8 @@
         <div class="product-list-details">
           <img src="images/memphis-notebook.jpg" alt="">
           <div class="overlay" style="background-color:#ff9678">
-            <div class="text">The Completist | Memphis Brush</div>
+            <div class="text-price">RM29.90</div>
+            <div class="text">The Completist - Memphis Brush</div>
           </div>
         </div>
       </div>
@@ -82,7 +90,8 @@
         <div class="product-list-details">
           <img src="images/brush-notebook.jpg" alt="">
           <div class="overlay" style="background-color:#dc9b14">
-            <div class="text">The Completist | Giant Brush Notebook</div>
+            <div class="text-price">RM29.90</div>
+            <div class="text">The Completist - Giant Brush Notebook</div>
           </div>
         </div>
       </div>
@@ -90,7 +99,8 @@
         <div class="product-list-details">
           <img src="images/pinkcut-notebook.jpg" alt="">
           <div class="overlay" style="background-color:#fd8899">
-            <div class="text">The Completist | Pink Cut Out Shapes Notebook</div>
+            <div class="text-price">RM29.90</div>
+            <div class="text">The Completist - Pink Cut Notebook</div>
           </div>
         </div>
       </div>
@@ -98,6 +108,7 @@
         <div class="product-list-details">
           <img src="images/vintage-notebook.jpg" alt="">
           <div class="overlay" style="background-color:#dc9b14">
+            <div class="text-price">RM29.90</div>
             <div class="text">Stalogy 016 Vintage Notebook</div>
           </div>
         </div>
@@ -106,6 +117,7 @@
         <div class="product-list-details">
           <img src="images/lavender-notebook.jpg" alt="">
           <div class="overlay" style="background-color:#192878">
+            <div class="text-price">RM29.90</div>
             <div class="text">Lavender Notebook</div>
           </div>
         </div>
@@ -114,6 +126,7 @@
         <div class="product-list-details">
           <img src="images/yellow-notebook.jpg" alt="">
           <div class="overlay" style="background-color:#dc9b14">
+            <div class="text-price">RM29.90</div>
             <div class="text">Yellow Notebook</div>
           </div>
         </div>
@@ -122,6 +135,7 @@
         <div class="product-list-details">
           <img src="images/bluelines-notebook.jpg" alt="">
           <div class="overlay" style="background-color:#00ba6d">
+            <div class="text-price">RM29.90</div>
             <div class="text">Blue Lines Notebook</div>
           </div>
         </div>

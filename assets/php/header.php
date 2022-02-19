@@ -6,8 +6,8 @@
   <body>
 
 
-  <img src="images/svg.svg" alt="">
 
+    <h1>Paper Street</h1>
 
 
   <nav>

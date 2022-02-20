@@ -18,7 +18,7 @@
 
   </head>
 
-  <body>
+  <body id="main">
     <?php include("./assets/php/header.php"); ?>
 
     <div class="productdetails-section">
@@ -31,7 +31,7 @@
           <p>Made in the MY using responsibly sourced paper</p>
 
 
-          <button class="productdetails-button" type="button" name="button">Add to Cart</button>
+          <button onclick="help()" class="productdetails-button" type="button" name="button" >Add to Cart</button>
 
           <div class="faq" style="border-bottom: 2px solid #ffffff; margin-top:55px;">
             <div class="question-productdetails">

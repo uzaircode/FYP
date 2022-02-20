@@ -384,20 +384,6 @@ display: flex;
   text-align: center;
 }
 
-.text {
-  font-family: self-modern-italic;
-  width: 100%;
-  font-size: 24px;
-  font-weight: 500;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 
 /* .product-list-box h5 {
   font-size: 17px;
@@ -571,7 +557,7 @@ display: flex;
 
 
 
-/*
+
 .show-btn {
   padding: 5px 13px;
   font-size: 14px;
@@ -584,7 +570,6 @@ display: flex;
 }
 
 input[type="checkbox"] {
-  display: none;
 }
 
 .layout {
@@ -597,28 +582,49 @@ input[type="checkbox"] {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
+#mylayout {
+  height: 1001px;
+  position: relative;
+}
+
 .container {
-  position: absolute;
-  display: none;
   background: #faf7f0;
   width: 360px;
   padding: 20px;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+.text {
+  font-family: self-modern-italic;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  /* -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 #show:checked~.container {
   display: block;
 }
 
-.container .close-btn {
+/* .container .close-btn {
   position: absolute;
   right: 20px;
   top: 15px;
   font-size: 28px;
   cursor: pointer;
-}
+} */
 
 .container .close-btn:hover {
   color: #000;
@@ -637,81 +643,7 @@ input[type="checkbox"] {
   height: 36px;
   width: 100%;
   margin: 40px 0;
-} */
-
-
-
-
-
-
-
-.cookies-content h6 {
-  margin-top: 20px;
-  font-size: 12px;
-  letter-spacing: 1px;
-  font-weight: 600;
 }
-
-.privacy-content h6 {
-  margin-top: 20px;
-  font-size: 12px;
-  letter-spacing: 1px;
-  font-weight: 600;
-}
-
-
-
-
-/* TABLE IN COOKIES PAGE  */
-table, td, th {
-  margin: 31px 0;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  padding: 15px;
-}
-
-.cookies-section li {
-  font-size: 14px;
-  font-weight: 600;
-  margin: 8px 40px 0;
-  color: #1e2525;
-
-}
-
-.privacy-section li {
-  font-size: 14px;
-  margin: 8px 40px 0;
-  color: #1e2525;
-
-}
-
-/* TABLE IN COOKIES PAGE  END */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 form .data span {
   font-size: 16px;
@@ -723,7 +655,8 @@ form .data input {
   height: 100%;
   width: 100%;
   margin-top: 2px;
-  font-size: 17px;
+  font-size: 14px;
+  padding-left: 8px;
   border: 1px solid white;
 }
 
@@ -793,6 +726,139 @@ form .signup-link a {
 form .signup-link a:hover {
   text-decoration: underline;
 }
+
+
+
+
+
+
+/* END */
+
+
+
+
+
+
+
+.cookies-content h6 {
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.privacy-content h6 {
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+
+
+
+/* TABLE IN COOKIES PAGE  */
+table, td, th {
+  margin: 31px 0;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+
+.cookies-section li {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 8px 40px 0;
+  color: #1e2525;
+
+}
+
+.privacy-section li {
+  font-size: 14px;
+  margin: 8px 40px 0;
+  color: #1e2525;
+
+}
+
+/* TABLE IN COOKIES PAGE  END */
+
+.percubaan {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0px;
+  background-color: #192878;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  margin: auto;
+  font-size: 31px;
+}
+
+#main {
+  transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+hr.new5 {
+  border: 0.1px solid white;
+  margin: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* FOOTER  */
 .footer {

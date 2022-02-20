@@ -18,7 +18,7 @@
 
   </head>
 
-  <body>
+  <body id="main">
     <?php include("./assets/php/header.php"); ?>
 
     <section class="notebook-section">
@@ -143,6 +143,7 @@
 
     </section>
 
+    <script src="javascript/script.js"></script>
 
     <?php include("./assets/php/footer.php"); ?>
   </body>

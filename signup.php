@@ -1,8 +1,8 @@
 <?php
 session_start();
-
   include("config/config.php");
   include("config/functions.php");
+
 
   if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
@@ -11,27 +11,17 @@ session_start();
       $password = $_POST['password'];
 
       if (!empty($email) && !empty($password)) {
+          $user_id = random_num(20);
+          $query = "insert into users (user_id,email,password) values ('$user_id','$email','$password')";
 
-          //read from database
-          $query = "select * from users where email = '$email' limit 1";
-          $result = mysqli_query($con, $query);
+          mysqli_query($con, $query);
 
-          if ($result) {
-              if ($result && mysqli_num_rows($result) > 0) {
-                  $user_data = mysqli_fetch_assoc($result);
-
-                  if ($user_data['password'] === $password) {
-                      $_SESSION['user_id'] = $user_data['user_id'];
-                      header("Location: aboutUs.php");
-                      die;
-                  }
-              }
-          }
+          header("Location: login.php");
+          die;
       } else {
-          echo "string";
+          echo "Please enter some valid information!";
       }
   }
-
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +52,7 @@ session_start();
       <div class="container">
         <!-- <label for="show" class="close-btn fas fa-times" title="close" onclick="closeSearch()"></label> -->
         <div class="text">
-          Log in
+          Sign up
         </div>
         <form method="post">
 
@@ -76,13 +66,13 @@ session_start();
             <input id="text" type="password" name="password">
           </div>
   <div class="forgot-pass">
-  <a href="signup.php" type="submit" name="signup">Forgotten your password?</a></div>
+  <a href="#" type="submit" name="signup">Forgotten your password?</a></div>
   <div class="btn">
             <div class="inner">
   </div>
-  <button type="submit" value = "Signup" name="signup">log in</button>
+  <button type="submit" value = "Signup" name="signup">sign up</button>
           </div>
-  <div class="signup-link"><a href="signup.php">Create an account</a></div>
+  <div class="signup-link"><a href="#">Create an account</a></div>
   </form>
   </div>
 </div>

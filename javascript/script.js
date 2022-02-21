@@ -5,17 +5,7 @@
    var userEmail = document.getElementById("email_field").value;
    var userPass = document.getElementById("password_field").value;
 
-
-   firebase.auth().signInWithEmailAndPassword(userEmail, userPass)
-     .then((userCredential) => {
-       // Signed in
-       window.alert("success");
-       // ...
-     })
-     .catch((error) => {
-       var errorCode = error.code;
-       var errorMessage = error.message;
-     });
+   window.alert(email_field + " " + password_field)
  }
 
 

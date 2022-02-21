@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -51,25 +53,7 @@
 </div>
 
 </script>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBxZCCgm-ZfZLeyvtoVjJUHdYyXFE0OtcM",
-    authDomain: "fyp-stationery.firebaseapp.com",
-    projectId: "fyp-stationery",
-    storageBucket: "fyp-stationery.appspot.com",
-    messagingSenderId: "87101177493",
-    appId: "1:87101177493:web:62b01a275589deca65e59c"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
 <script src="javascript/script.js"></script>
 
 

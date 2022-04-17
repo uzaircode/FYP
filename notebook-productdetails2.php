@@ -78,7 +78,7 @@ if (isset($_GET["action"])) {
 
           <div>
                <?php
-               $query = "SELECT * FROM product where id= '1'";
+               $query = "SELECT * FROM product where id= '2'";
 
                $result = mysqli_query($connect, $query);
                if ($result && mysqli_num_rows($result) > 0) {
@@ -88,13 +88,11 @@ if (isset($_GET["action"])) {
 
                <div class="col-md-4">
                     <form method="post" action="notebook-productdetails.php?action=add&id=<?php echo $row["id"]; ?>">
-                         <div>
-                           <img  src="'.$row['image'].'" />
-                           <!-- <img src="<?php echo $row["image"]; ?>" class="img-responsive" /><br />   -->
-                            <input type="text" name="quantity" class="form-control" value="1" />
-                            <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
-                            <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
-                            <button onclick="help()" type="submit" name="add_to_cart" style="margin-top:5px;" class="btn-success" value="Add to Cart">Add to Cart</button>
+                         <div  align="center">
+                              <input type="text" name="quantity" class="form-control" value="1" />
+                              <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
+                              <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
+                              <button onclick="help()" type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart">Add to Cart</button>
                          </div>
                     </form>
                </div>

@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Terms & Conditions | Papier</title>
-    <link rel="shortcut icon" href="images/mata_kecik.png"/>
+    <title>Cookies - Paper Street</title>
+    <link rel="shortcut icon" href="images/favicon/duck.ico"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -55,7 +55,7 @@
     <p>We do use or allow third parties to serve cookies that fall into the three categories above. For example, like many companies, we use third parties such as Google Analytics to help us monitor our traffic. We may also use third party cookies to help us with market research, revenue tracking, improving site functionality and monitoring compliance with our terms and conditions and copyright policy. Please see the table below for the full list of third parties who serve cookies on the Website:</p>
 
 
-    <table>
+    <table class="cookies-table">
   <tr>
     <th>Company</th>
     <th>Description</th>

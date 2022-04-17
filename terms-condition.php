@@ -2,8 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Terms & Conditions | Papier</title>
-    <link rel="shortcut icon" href="images/mata_kecik.png"/>
+    <title>Terms & Conditions - Paper Street</title>
+
+    <link rel="shortcut icon" href="images/favicon/duck.ico"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

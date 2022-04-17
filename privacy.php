@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Our privacy policy | Papier</title>
-    <link rel="shortcut icon" href="images/mata_kecik.png"/>
+    <title>Our Privacy Policy - Paper Street</title>
+    <link rel="shortcut icon" href="images/favicon/duck.ico"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -30,7 +30,7 @@
     <h1>Our privacy policy</h1>
 
     <h6>PLEASE READ THIS POLICY CAREFULLY BEFORE USING PAPIER LTD SERVICES</h6>
-    
+
     <p>Protecting your data, privacy and personal information is very important to Papier LTD(" us", " our" or " we"). It is vitally important to us that our customers feel secure when using the Services.</p>
     <p>This policy (together with our terms of use at https://www.papier.com/info/t-c and any other documents referred to in it), sets out the basis on which any personal data we collect from you, or that you provide to us, will be processed by Papier LTD. Please read this privacy policy carefully to understand the types of information we collect from you, how we use that information, the circumstances under which we will share it with third parties, and your rights in relation to the personal data you provide to us.</p>
     <p>When visiting Papier LTD's website at https://www.papier.com/ (our " Website"), using our application (our " App") or using any of the services offered via the Website or the App (the " Services"), you will be asked to indicate your acknowledgment of, and where applicable your consent to, the practices described in this policy.</p>

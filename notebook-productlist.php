@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Notebooks</title>
-    <link rel="shortcut icon" href="images/favicon.png"/>
+    <title>Notebooks & Postcards - Paper Street</title>
+    <link rel="shortcut icon" href="images/favicon/duck.ico"/>
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">

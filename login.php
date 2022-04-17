@@ -1,6 +1,5 @@
 <?php
 session_start();
-
   include("config/config.php");
   include("config/functions.php");
 
@@ -9,6 +8,9 @@ session_start();
       //something was posted
       $email = $_POST['email'];
       $password = $_POST['password'];
+
+      $_SESSION["email"] = $email;
+
 
       if (!empty($email) && !empty($password)) {
 
@@ -22,7 +24,7 @@ session_start();
 
                   if ($user_data['password'] === $password) {
                       $_SESSION['user_id'] = $user_data['user_id'];
-                      header("Location: aboutUs.php");
+                      header("Location: homepage.php");
                       die;
                   }
               }
@@ -38,7 +40,7 @@ session_start();
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>login</title>
+    <title>Log In - Paper Street</title>
     <link rel="shortcut icon" href="images/favicon.png"/>
 
     <link rel="stylesheet" href="css/styles.css">
@@ -47,7 +49,7 @@ session_start();
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <link rel="icon" href="/images/favicon.png">
+    <link rel="icon" href="images/favicon/duck.ico">
 
 
 
@@ -61,26 +63,26 @@ session_start();
     <div id="mylayout">
       <div class="container">
         <!-- <label for="show" class="close-btn fas fa-times" title="close" onclick="closeSearch()"></label> -->
-        <div class="text">
+        <div class="text-sign">
           Log in
         </div>
         <form method="post">
 
           <div class="data">
             <span>Email</span>
-            <input id="text" type="text" name="email">
+            <input id="text" type="text" name="email" required>
           </div>
 
   <div class="data">
   <span>Password</span>
-            <input id="text" type="password" name="password">
+            <input id="text" type="password" name="password" required>
           </div>
   <div class="forgot-pass">
-  <a href="signup.php" type="submit" name="signup">Forgotten your password?</a></div>
+  <a href="password-reset.php" type="submit" name="signup">Forgotten your password?</a></div>
   <div class="btn">
             <div class="inner">
   </div>
-  <button type="submit" value = "Signup" name="signup">log in</button>
+  <button type="submit" value = "Signup" name="signup" class="button-sign">Log In</button>
           </div>
   <div class="signup-link"><a href="signup.php">Create an account</a></div>
   </form>

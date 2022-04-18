@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -17,12 +16,12 @@
 
   </head>
 
-  <body>
+  <body id="main">
     <?php include("./assets/php/header.php"); ?>
 
     <div class="homepage-notice">
       <div class="homepage-notice-box">
-        <p>Are you in United States? This is the Papier UK store, would you like to go to Papier US?</p>
+        <p>Aidilfitri Opening Hours: Tuesday 3rd - 10.30-4, Wednesday 4th - 10.30-5.30, Thursday 5th - closed. Friday 6th - Closed. Have a lovely break!</p>
       </div>
     </div>
     <div id="homepage-section1">
@@ -54,52 +53,6 @@
     </div>
   </div>
 
-  <!-- <div class="homepage-section3">
-    <div class="homepage-section3-details">
-        <h2>Why does life feel more organised when you write it down?</h2>
-        <div class="product-list-homepage">
-        <div class="product-list-box-homepage">
-          <div class="product-list-details">
-            <img src="images/floral-notebook.jpg" alt="" style="width: 294px; height:294px">
-            <a href="productdetails/notebook-productdetails.php">
-            <div class="overlay" style="background-color:#00ba6d">
-              <div class="text-price">RM29.90</div>
-              <div class="text">Floral Burst Notebook</div>
-            </div>
-            </a>
-          </div>
-        </div>
-        <div class="product-list-box-homepage">
-          <div class="product-list-details">
-            <img src="images/mushroom-notebook.jpg" alt="" style="width: 294px; height:294px">
-            <div class="overlay" style="background-color:#ff9678">
-              <div class="text-price">RM29.90</div>
-              <div class="text">Mushroom Postcards</div>
-            </div>
-          </div>
-        </div>
-        <div class="product-list-box-homepage">
-          <div class="product-list-details">
-            <img src="images/oranges-notebook.jpg" alt="" style="width: 294px; height:294px">
-            <div class="overlay" style="background-color:#192878">
-              <div class="text-price">RM29.90</div>
-              <div class="text">Oranges Notebook</div>
-            </div>
-          </div>
-        </div>
-        <div class="product-list-box-homepage">
-          <div class="product-list-details">
-            <img src="images/mirror2-notebook.jpg" alt="" style="width: 294px; height:294px">
-            <div class="overlay" style="background-color:#ff9678">
-              <div class="text-price">RM29.90</div>
-              <div class="text">The Completist - Mirrors Notebook</div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
-</div> -->
-
   <div class="homepage-section2">
     <div class="homepage-section2-details">
         <div style="display:block; margin: auto;">
@@ -126,9 +79,11 @@
 </div>
 
 
-    <?php include("./assets/php/footer.php"); ?>
+<script src="javascript/script.js"></script>
+
+<?php include("./assets/php/footer.php"); ?>
 
 
-  </body>
+  </>
 
   </html>

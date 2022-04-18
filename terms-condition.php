@@ -18,7 +18,7 @@
 
   </head>
 
-  <body>
+  <body id="main">
 
     <?php include("./assets/php/header.php"); ?>
 

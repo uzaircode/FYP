@@ -4,14 +4,12 @@ error_reporting(E_ALL & ~E_NOTICE);
 ini_set('display_errors', 1);
 $login = "";
 $dashboard = "";
-    if (isset($_SESSION["email"]) && !empty($_SESSION["email"])) {
-        echo "Welcome, {$_SESSION["email"]} <br>";
+    if (isset($_SESSION["email"]) && !empty($_SESSION["email"]) && $user_data['password'] === $password) {
         $login = "style='display:none;'";
         $dashboard = "style='display:inline;'";
     } else {
         $login = "style='display:inline;'";
         $dashboard = "style='display:none;'";
-        // do something else
     }
 
 
@@ -59,7 +57,7 @@ $dashboard = "";
                    <th width="5%">Action</th>
               </tr>
               <?php if (empty($_SESSION["shopping_cart"])): ?>
-                <h2 id ="doThis" href="#" style="display:block">Your cart is empty</h2>
+                <!-- <h2 id ="doThis" href="#" style="display:block">Your cart is empty</h2> -->
               <?php endif; ?>
               <?php
               if (!empty($_SESSION["shopping_cart"])) {
@@ -69,14 +67,15 @@ $dashboard = "";
                       <script>
                       document.getElementById("doThiss").style.display = "none";
                       </script>
-                      <h2 id ="doThiss" href="#" style="display:block">Your shopping cart</h2>
+                      <!-- <h2 id ="doThiss" href="#" style="display:block; padding-top:20px; padding-bottom:20px; text-align:center;">Your shopping cart</h2> -->
 
               <tr>
                    <td><?php echo $values["item_name"]; ?></td>
                    <td><?php echo $values["item_quantity"]; ?></td>
                    <td>$ <?php echo $values["item_price"]; ?></td>
                    <td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>
-                   <td><a class="text-danger" href="notebook-productdetails.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span >Remove</span></a></td>
+                   <td><a class="text-danger" href="notebook-productdetails.php?action=delete&id=<?php echo $values["item_id"]; ?>"><i class="far fa-times-circle" style="font-size:26px; margin:auto;"></i></a></td>
+
               </tr>
               <?php
                         $total = $total + ($values["item_quantity"] * $values["item_price"]);

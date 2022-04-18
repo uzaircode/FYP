@@ -5,7 +5,6 @@ ini_set('display_errors', 1);
 $login = "";
 $dashboard = "";
     if (isset($_SESSION["email"]) && !empty($_SESSION["email"])) {
-        echo "Welcome, {$_SESSION["email"]} <br>";
         $login = "style='display:none;'";
         $dashboard = "style='display:inline;'";
     } else {
@@ -59,24 +58,25 @@ $dashboard = "";
       <div class="table-responsive">
            <table class="table-bordered">
                 <tr>
-                  <th width="5%">Action</th>
+                <th width="5%">Action</th>
                  <th width="40%">Product</th>
                  <th width="20%">Price</th>
                  <th width="10%">Quantity</th>
                  <th width="15%">Subtotal</th>
+                 <br>
                 </tr>
                 <?php if (empty($_SESSION["shopping_cart"])): ?>
-                  <h2 id ="doThis" href="#" style="display:block">Your cart is empty</h2>
+                  <!-- <h2 id ="doThis" href="#" style="display:block">Your cart is empty</h2> -->
                 <?php endif; ?>
                 <?php
                 if (!empty($_SESSION["shopping_cart"])) {
                     $total = 0;
                     foreach ($_SESSION["shopping_cart"] as $keys => $values) {
                         ?>
-                        <h2 id ="doThis" href="#" style="display:block">Your shopping cart</h2>
+                        <!-- <h2 id ="doThis" href="#" style="display:block">Your shopping cart</h2> -->
                 <tr>
 
-                  <td><a class="text-danger" href="notebook-productdetails.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span >Remove</span></a></td>
+                  <td><a class="text-danger" href="notebook-productdetails.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span ><i class="far fa-times-circle" style="font-size:26px; margin:auto;"></i></span></a></td>
                   <td><?php echo $values["item_name"]; ?></td>
                   <td>$ <?php echo $values["item_price"]; ?></td>
                   <td><?php echo $values["item_quantity"]; ?></td>
@@ -98,40 +98,13 @@ $dashboard = "";
     </div>
       <div class="shoppingcart-cart">
         <div class="shoppingcart-cart-left">
-          <h2>CART TOTALS</h2>
-          <table>
-            <tr>
-              <th>Subtotal</th>
-              <th>RM228.00</th>
-            </tr>
-            <tr>
-              <th>Subtotal</th>
-              <th>RM159.00</th>
-            </tr>
-          </table>
-          <hr>
           <div style="display: flex; column-gap: 10px; margin-top:6px; margin-bottom:6px;">
-            <i class="fas fa-tags" style="font-size: 13.5px; margin-top:6px;"></i>
-            <p>Free shipping coupon</p>
           </div>
-          <hr>
-          <table>
-            <tr>
-              <th>Total</th>
-              <th style="margin-left:28px;">RM387.00</th>
-            </tr>
-          </table>
-          <h2>HAVE A GIFT CARD?</h2>
-          <div class="shoppingcart-giftcard">
-            <input type="text" placeholder="Enter your code.." name="search" style="height:37px; width:280px; padding-left:10px;">
-            <button type="button" name="button" style="height:36px; width:73px; font-size:14px;">APPLY</button>
-          </div>
-          <a href="shoppingcart-shipping.php"><button type="button" name="button" style="font-size:19px; margin-top:20px;">PROCEED TO CHECKOUT</button></a>
-
+          <a href="shoppingcart-shipping.php"><button type="button" name="button">Checkout</button></a>
         </div>
-        <div>
-          <img src="images/gift-shoppingcart.jpeg" alt="" style="height:329px; width:329px;">
-          <p style="text-align:center;"><a href="productlist-neqah.html">Need some gifting ideas?</a></p>
+        <div style="margin-top:30px;">
+          <img src="images/gift.jpeg" alt="" style="height:329px; width:329px;">
+          <p style="text-align:center; margin-top:10px;"><a href="productlist-neqah.html">Need some gifting ideas?</a></p>
         </div>
       </div>
       <div class="icon-shoppingcart">

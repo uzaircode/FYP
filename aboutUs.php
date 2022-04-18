@@ -1,10 +1,4 @@
-<?php
-  include("config/config.php");
-  include("config/functions.php");
 
-  // $user_data = check_login($con);
-
-?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -26,8 +20,16 @@
 
   </head>
 
-  <body>
+  <body id="main">
     <?php include("./assets/php/header.php"); ?>
+
+    <?php
+      include("config/config.php");
+      include("config/functions.php");
+
+      // $user_data = check_login($con);
+
+    ?>
 
     <section class="aboutUs">
       <div class="aboutUs-section1">

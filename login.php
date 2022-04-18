@@ -1,5 +1,7 @@
 <?php
 session_start();
+error_reporting(E_ALL ^ E_NOTICE);
+
   include("config/config.php");
   include("config/functions.php");
 
@@ -24,13 +26,13 @@ session_start();
 
                   if ($user_data['password'] === $password) {
                       $_SESSION['user_id'] = $user_data['user_id'];
-                      header("Location: homepage.php");
+                      header("Location: dashboard.php");
                       die;
+                  } else {
                   }
               }
           }
       } else {
-          echo "string";
       }
   }
 
@@ -56,7 +58,7 @@ session_start();
 
   </head>
 
-  <body>
+  <body id="main">
     <?php include("./assets/php/header.php"); ?>
 
 
@@ -77,8 +79,9 @@ session_start();
   <span>Password</span>
             <input id="text" type="password" name="password" required>
           </div>
+
   <div class="forgot-pass">
-  <a href="password-reset.php" type="submit" name="signup">Forgotten your password?</a></div>
+  <a href="password-reset.php" type="submit" name="signup"></a></div>
   <div class="btn">
             <div class="inner">
   </div>

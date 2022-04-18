@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(E_ALL ^ E_NOTICE);
 
   include("config/config.php");
   include("config/functions.php");
@@ -13,8 +14,12 @@ session_start();
       $num = mysqli_fetch_array($query);
 
       if ($num>0) {
-          $con = mysqli_query($con, "UPDATE users set password = '$npwd' where email = '$email'");
+        echo '<script>alert("Password successfully reset.")</script>';
+        $con = mysqli_query($con, "UPDATE users set password = '$npwd' where email = '$email'");
+        header("Location: dashboard.php");
+
       } else {
+        echo '<script>alert("Wrong password!")</script>';
       }
   }
 
@@ -43,7 +48,6 @@ session_start();
   <body>
     <?php include("./assets/php/header.php"); ?>
 
-
     <div id="mylayout">
       <div class="container">
         <!-- <label for="show" class="close-btn fas fa-times" title="close" onclick="closeSearch()"></label> -->
@@ -57,11 +61,11 @@ session_start();
             <input id="email" type="text" name="email" required>
           </div>
           <div class="data">
-          <span>old password</span>
+          <span>Old Password</span>
                     <input id="new_password" type="password" name="password" id="password" required>
                   </div>
           <div class="data">
-          <span>new password</span>
+          <span>New Password</span>
                     <input id="new_password" type="password" name="npwd" id="npwd" required>
                   </div>
   <div class="btn">

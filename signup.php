@@ -65,7 +65,7 @@ session_start();
 
   </head>
 
-  <body>
+  <body id="main">
     <?php include("./assets/php/header.php"); ?>
 
 
@@ -90,7 +90,7 @@ session_start();
             <input id="text" type="password" name="password" required>
           </div>
   <div class="forgot-pass">
-  <a href="#" type="submit" name="signup">Forgotten your password?</a></div>
+  <a href="#" type="submit" name="signup"></a></div>
   <div class="btn">
             <div class="inner">
   </div>

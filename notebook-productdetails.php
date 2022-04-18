@@ -1,5 +1,7 @@
 <?php
 session_start();
+error_reporting(E_ALL ^ E_NOTICE);
+
 
 $hostname = "localhost";
 $username = "root";
@@ -69,13 +71,6 @@ if (isset($_GET["action"])) {
     <div class="productdetails-section">
 
         <div class="productdetails-box-left">
-          <h1>Floral Burst Notebook by Micke Lindebergh for Wrap</h1>
-          <h2>RM29.00</h2>
-          <p>Illustrated by the wonderful Micke Lindebergh and produced by Wrap, this notebook, with its super bright abstract floral design is perfect for happy jottings.</p>
-          <p>These beautiful stationery products are produced using fine quality paper stock, with a thread sewn spine and gold foiled 'Notes' detail to the front.</p>
-          <p>Made in the MY using responsibly sourced paper</p>
-
-
           <div>
                <?php
                $query = "SELECT * FROM product where id= '1'";
@@ -84,57 +79,68 @@ if (isset($_GET["action"])) {
                if ($result && mysqli_num_rows($result) > 0) {
                    while ($row = mysqli_fetch_array($result)) {
                        ?>
-
+                       <h1><?php echo $row["name"]; ?></h1>
+                       <h2><?php echo $row["price"]; ?></h2>
+                       <p><?php echo $row["description"]; ?></p>
 
                <div class="col-md-4">
-                    <form method="post" action="notebook-productdetails.php?action=add&id=<?php echo $row["id"]; ?>">
-                         <div>
-                           <img  src="'.$row['image'].'" />
+                    <form class="productdetails-php" method="post" action="notebook-productdetails.php?action=add&id=<?php echo $row["id"]; ?>">
+                           <!-- <img  src="'.$row['image'].'" /> -->
                            <!-- <img src="<?php echo $row["image"]; ?>" class="img-responsive" /><br />   -->
-                            <input type="text" name="quantity" class="form-control" value="1" />
                             <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
                             <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
-                            <button onclick="help()" type="submit" name="add_to_cart" style="margin-top:5px;" class="btn-success" value="Add to Cart">Add to Cart</button>
-                         </div>
+                            <button onclick="help()" type="submit" name="add_to_cart" class="btn-success" value="Add to Cart">Add to Cart</button>
+                            <input class="productdetails-quantity" type="text" name="quantity" value="1" />
                     </form>
                </div>
+               <div class="faq" style="border-bottom: 2px solid #ffffff; margin-top:55px;">
+                 <div class="question-productdetails">
+                   <a href="#" onClick="return false;">Size</a>
+                     <i class="fas fa-chevron-right"></i>
+                 </div>
+                 <div class="answer">
+                   <p>Size: 160 x 210mm</p>
+                 </div>
+               </div>
+               <div class="faq" style="border-bottom: 2px solid #ffffff;">
+                 <div class="question-productdetails">
+                   <a href="#" onClick="return false;">Paper quality</a>
+                     <i class="fas fa-chevron-right"></i>
+                 </div>
+                 <div class="answer">
+                   <p>Pages: 64 smooth plain pages</p>
+                 </div>
+               </div>
+               <div class="faq" style="border-bottom: 2px solid #ffffff;">
+                 <div class="question-productdetails">
+                   <a href="#" onClick="return false;">What's inside?</a>
+                     <i class="fas fa-chevron-right"></i>
+                 </div>
+                 <div class="answer">
+                   <p>7 lined sides at the back for notes.</p>
+                 </div>
+               </div>
+             </div>
                <?php
                    }
                }
                ?>
-
           </div>
 
-          <div class="faq" style="border-bottom: 2px solid #ffffff; margin-top:55px;">
-            <div class="question-productdetails">
-              <a href="#" onClick="return false;">Size</a>
-                <i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="answer">
-              <p>Size: 160 x 210mm</p>
-            </div>
-          </div>
-          <div class="faq" style="border-bottom: 2px solid #ffffff;">
-            <div class="question-productdetails">
-              <a href="#" onClick="return false;">Paper quality</a>
-                <i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="answer">
-              <p>Pages: 64 smooth plain pages</p>
-            </div>
-          </div>
-          <div class="faq" style="border-bottom: 2px solid #ffffff;">
-            <div class="question-productdetails">
-              <a href="#" onClick="return false;">What's inside?</a>
-                <i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="answer">
-              <p>7 lined sides at the back for notes.</p>
-            </div>
-          </div>
-        </div>
+
         <div class="productdetails-box-right">
-          <img src="images/floral-notebook.jpg" alt="">
+          <?php
+          $query = "SELECT * FROM product where id= '1'";
+
+          $result = mysqli_query($connect, $query);
+          if ($result && mysqli_num_rows($result) > 0) {
+              while ($row = mysqli_fetch_array($result)) {
+                  ?>
+          <?php echo "<img src='images/product_images/".$row['image']."' >"; ?>
+          <?php
+              }
+          }
+          ?>
         </div>
 
     </div>

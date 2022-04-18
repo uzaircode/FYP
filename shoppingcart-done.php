@@ -59,10 +59,9 @@ $dashboard = "";
 
         <section class="shoppingcart-done-section">
           <div class="shoppingcart-done">
-            <h1>THANK YOU!</h1>
+            <h1 style="">THANK YOU!</h1>
             <p>Thanks for your purchase, and for supporting our business!</p>
-            <p>If you are happy with your scaft, please take a minute to review it <a href="feedback1.html">here.</a></p>
-            <i class="far fa-check-circle"></i>
+            <i class="far fa-check-circle" style="margin-top:20px;"></i>
             <a href="homepage.php"><button type="button" name="button" class="button-done">BACK TO HOMEPAGE</button></a>
           </div>
 

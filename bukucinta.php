@@ -7,7 +7,6 @@ $password = "mysql";
 $database = "product";
 
 $connect = mysqli_connect($hostname, $username, $password, $database) or die("Database connection failed.");
-
 if (isset($_POST["add_to_cart"])) {
     if (isset($_SESSION["shopping_cart"])) {
         $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
@@ -34,7 +33,6 @@ if (isset($_POST["add_to_cart"])) {
         $_SESSION["shopping_cart"][0] = $item_array;
     }
 }
-
 if (isset($_GET["action"])) {
     if ($_GET["action"] == "delete") {
         foreach ($_SESSION["shopping_cart"] as $keys => $values) {
@@ -45,8 +43,6 @@ if (isset($_GET["action"])) {
         }
     }
 }
-
-
 ?>
 
 <!DOCTYPE html>

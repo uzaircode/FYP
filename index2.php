@@ -158,3 +158,65 @@ if (isset($_GET["action"])) {
 
      </body>
 </html>
+
+<div class="product-list-box">
+  <div class="product-list-details">
+    <?php
+    $server = "localhost";
+    $username = "root";
+    $password = "mysql";
+    $dbname = "product";
+    $conn = mysqli_connect($server, $username, $password, $dbname);
+    $sql = "select * from product";
+    $result = $conn-> query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result -> fetch_assoc()) {
+          echo "<img src='images/product_images/".$row['image']."' >";
+        }
+    } else {
+    }
+        $conn -> close();
+    ?>
+    <div class="overlay" style="background-color:#ff9678">
+      <div class="text-price">
+        <?php
+        $server = "localhost";
+        $username = "root";
+        $password = "mysql";
+        $dbname = "product";
+        $conn = mysqli_connect($server, $username, $password, $dbname);
+        $sql = "select * from product";
+        $result = $conn-> query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result -> fetch_assoc()) {
+              echo $row["price"];
+            }
+        } else {
+        }
+            $conn -> close();
+        ?>
+      </div>
+      <div class="text">
+        <?php
+        $server = "localhost";
+        $username = "root";
+        $password = "mysql";
+        $dbname = "product";
+        $conn = mysqli_connect($server, $username, $password, $dbname);
+        $sql = "select * from product";
+        $result = $conn-> query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result -> fetch_assoc()) {
+              echo $row["name"];
+            }
+        } else {
+        }
+            $conn -> close();
+        ?>
+      </div>
+    </div>
+  </div>
+</div>

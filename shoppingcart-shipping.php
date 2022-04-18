@@ -5,7 +5,6 @@ ini_set('display_errors', 1);
 $login = "";
 $dashboard = "";
     if (isset($_SESSION["email"]) && !empty($_SESSION["email"])) {
-        echo "Welcome, {$_SESSION["email"]} <br>";
         $login = "style='display:none;'";
         $dashboard = "style='display:inline;'";
     } else {
@@ -15,7 +14,10 @@ $dashboard = "";
     }
 
 
+
+
     ?>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -61,37 +63,37 @@ $dashboard = "";
 
 
       <div class="shoppingcart-shipping">
-        <div>
-          <div style="width:100%;">
-            <label for="name" class="username">FIRST NAME</label> <br>
-            <input type="text" name="name" size="50" class="field-input" style="padding-left:5px; margin-bottom:10px;"> <br>
+        <form action="insertorder.php" method="post">
+          <div>
+            <div style="width:100%;">
+              <label for="name" class="username">FIRST NAME</label> <br>
+              <input type="text" name="name" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
+            </div>
           </div>
-        </div>
-        <label for="name" class="username" style="margin-top:10px;">COMPANY NAME (OPTIONAL)</label> <br>
-        <input type="text" name="name" size="50" class="field-input" style="padding-left:5px; margin-bottom:10px;"> <br>
+          <label for="name" class="username" style="margin-top:10px;">COMPANY NAME (OPTIONAL)</label> <br>
+          <input type="text" name="f" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
 
-        <label for="name" class="username">COUNTRY / REGION </label> <br>
-        <input type="text" name="name" size="50" class="field-input" style="padding-left:5px; margin-bottom:10px;"> <br>
+          <label for="name" class="username">COUNTRY / REGION </label> <br>
+          <input type="text" name="e" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
 
-        <label for="name" class="username">STREET ADDRESS</label> <br>
-        <input type="text" name="name" size="50" class="field-input" style="padding-left:5px; margin-bottom:10px;"> <br>
-        <input type="text" name="name" size="50" class="field-input" style="padding-left:5px; margin-bottom:10px;"> <br>
+          <label for="name" class="username">STREET ADDRESS</label> <br>
+          <input type="text" name="e" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
+          <input type="text" name="d" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
 
-        <label for="name" class="username">CITY</label> <br>
-        <input type="text" name="name" size="50" class="field-input" style="padding-left:5px; margin-bottom:10px;"> <br>
+          <label for="name" class="username">CITY</label> <br>
+          <input type="text" name="d" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
 
-        <label for="name" class="username">STATE</label> <br>
-        <input type="text" name="name" size="50" class="field-input" style="padding-left:5px; margin-bottom:10px;"> <br>
+          <label for="name" class="username">STATE</label> <br>
+          <input type="text" name="d" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
 
-        <label for="name" class="username">POSTCODE</label> <br>
-        <input type="text" name="name" size="50" class="field-input" style="padding-left:5px; margin-bottom:10px;"> <br>
+          <label for="name" class="username">POSTCODE</label> <br>
+          <input type="text" name="d" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
 
-        <label for="name" class="username">PHONE</label> <br>
-        <input type="text" name="name" size="50" class="field-input" style="padding-left:5px; margin-bottom:10px;"> <br>
+          <label for="name" class="username">PHONE</label> <br>
+          <input type="text" name="d" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
 
-        <label for="name" class="username">EMAIL ADDRESS</label> <br>
-        <input type="text" name="name" size="50" class="field-input" style="padding-left:5px; margin-bottom:10px;"> <br>
-
+          <label for="name" class="username">EMAIL ADDRESS</label> <br>
+          <input type="text" name="d" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
       </div>
       <div class="container-shipping">
         <h1>Confirm Your Payment</h1>
@@ -144,15 +146,15 @@ $dashboard = "";
                 <option value="2015">2015</option>
               </select>
             </div>
-            <div class="cards-shipping">
+            <div class="cards-shipping" style="margin-right:120px;">
               <img src="images/mc.png" alt="">
               <img src="images/vi.png" alt="">
-              <img src="images/pp.png" alt="">
             </div>
           </div>
         </div>
-        <a href="shoppingcart-done.php" class="button-shipping"><button type="button" name="button" >CONFIRM PAYMENT</button></a>
+        <a class="button-shipping"><button type="submit" name="submit" >CONFIRM PAYMENT</button></a>
       </div>
+    </form>
     </section>
 </section>
 

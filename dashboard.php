@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -15,8 +16,9 @@
 
   </head>
 
-  <body>
+  <body id="main">
     <?php include("./assets/php/header.php"); ?>
+
 
     <div class="tab-section">
 
@@ -24,35 +26,26 @@
     <div class="tab">
       <h2>My Account</h2>
       <button class="tablinks" onclick="openCity(event, 'Profile')" id="defaultOpen">Profile</button>
-      <button class="tablinks" onclick="openCity(event, 'Orders')">Orders</button>
       <button class="tablinks" onclick="openCity(event, 'Address')">Home Address</button>
-      <button class="tablinks" onclick="openCity(event, 'Log-out')">Log out</button>
+      <button onclick="logout()" type="submit" value = "logout" name="logout" class="button-sign">Log Out</button>
     </div>
 
 
     <div id="Profile" class="tabcontent">
       <h2>Personal Info</h2>
-      <p>Name</p>
-      <p>Nik Uzair</p>
+      <!-- <p>Name</p> -->
+      <!-- <p>Nik Uzair</p> -->
 
       <p>Email</p>
-      <p>nikuzairsc@gmail.com</p>
+      <?php echo "{$_SESSION["email"]} <br>"; ?>
 
-      <p>Password</p>
-      <p>********</p>
-
-      <button type="button" name="button">Edit Password</button>
-    </div>
-
-    <div id="Orders" class="tabcontent">
-      <h2>Orders</h2>
-      <p>Here’s your order history. You can re-order any previous purchases by clicking ‘Create again’.</p>
+      <button type="button" name="button" onclick="reset()">Edit Password</button>
     </div>
 
     <div id="Address" class="tabcontent">
       <h2>Home Address</h2>
       <p>Store your shipping addresses here to refer back to - only recently used addresses will appear at checkout. Please note, you cannot add address lists for envelope addressing here. Please ensure you add these on the envelope page of the appropriate product.</p>
-      <button type="button" name="button">Add Home Address</button>
+      <button type="button" name="button">Home Address</button>
     </div>
     <div id="Log-out" class="tabcontent">
     </div>
@@ -76,8 +69,16 @@
       evt.currentTarget.className += " active";
     }
 
+    function logout() {
+      window.location="login.php";
+    }
+    function reset() {
+      window.location="password-reset.php";
+    }
+
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
+
     </script>
 
 

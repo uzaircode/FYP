@@ -16,7 +16,6 @@ if (isset($_POST['submit'])) {
 
 
 
-
     foreach ($_SESSION["shopping_cart"] as $keys => $values)
     {
       $count = $count + 1;
@@ -30,16 +29,19 @@ if (isset($_POST['submit'])) {
         $total = $total + ($quantity * $item_price);
         $subtotal = $values[$total];
 
+        $query = "insert into `order` (customer_id,product_id,order_quantity,order_subtotal,order_status) values ('$customer_id','$product_id','$quantity',$total,'Pending')";
 
-        $query = "insert into `order`(customer_id,product_id,order_quantity,order_subtotal,order_status) values ('$customer_id','$product_id','$quantity',$total,'Pending')";
       }
-
-      $run = mysqli_query($conn, $query) or die(mysqli_error($conn));
+      $run = mysqli_multi_query($conn, $query) or die(mysqli_error($conn));
     }
 
+
   if ($run) {
+
     header("Location:shoppingcart-done.php");
   } else {
       echo "not working!";
   }
 }
+
+?>

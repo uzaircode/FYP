@@ -48,6 +48,7 @@
                     <div class="card">
                     <div class="card-header">
                         <h3>Recent Order</h3>
+                        <a href="updatestatus.php">Update Status <span class="las la-arrow-right"></span></a>
                     </div>
 
                     <div class="card-body">
@@ -55,7 +56,7 @@
                             <table width="100%">
                             <thead>
                                 <tr>
-                                  <td>Customers ID</td>
+                                  <td>Order ID</td>
                                   <td>Email</td>
                                   <td>Phone Number</td>
                                   <td>Product Name</td>
@@ -78,12 +79,14 @@
                               }
 
                               mysqli_select_db($con, 'order');
-                              $sql = 'select * from product inner join `order` on product.product_id = order.product_id join customer on customer.customer_id = customer.customer_id';
+                              // $sql = 'select * from `order`';
+
+                              $sql = 'select * from ((`order` inner join customer on order.customer_id = customer.customer_id) inner join product on order.product_id = product.product_id)';
 
                               $result = mysqli_query($con, $sql);
                               if (mysqli_num_rows($result) > 0) {
                                 while($row = mysqli_fetch_array($result)) {
-                                  echo "</tr><td>" . $row["order_id"] . "</td><td>" . $row["customer_email"] . "</td><td>" . $row["customer_contact"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["order_quantity"] . "</td><td>" . $row["product_price"] . "</td><td>" . $row["order_status"] ;
+                                  echo "</tr><td>" . $row["order_id"] . "</td><td>" . $row["customer_email"] . "</td><td>" . $row["customer_contact"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["order_quantity"] . "</td><td>" . $row["product_price"] . "</td><td>" . $row["order_status"];
                                 }
                               } else {
                               }

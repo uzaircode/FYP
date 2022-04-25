@@ -64,134 +64,8 @@
             </div> -->
         </header>
         <main>
-            <div class="cards">
-                <div class="card-single">
-                    <div>
+          <?php include("card-header-none.php"); ?>
 
-
-                        <h1>
-                          <?php
-                                $hostname = "localhost";
-                                $username = "root";
-                                $password = "mysql";
-                                $database = "login_register";
-
-                                $con = mysqli_connect($hostname, $username, $password, $database) or die("Database connection failed.");
-
-                                $sql = "select * from users";
-
-                                if ($result = mysqli_query($con, $sql)) {
-
-                                    // Return the number of rows in result set
-                                    $rowcount = mysqli_num_rows( $result );
-
-                                    // Display result
-                                    $rowcount;
-
-                                    echo $rowcount;
-                                 }
-                            ?>
-                          </h1>
-                        <span>Customers</span>
-                    </div>
-                    <div>
-                        <span class="las la-users"></span>
-                    </div>
-                    </div>
-                <div class="card-single">
-                    <div>
-                      <h1>
-                        <?php
-                              $hostname = "localhost";
-                              $username = "root";
-                              $password = "mysql";
-                              $database = "product";
-
-                              $con = mysqli_connect($hostname, $username, $password, $database) or die("Database connection failed.");
-
-                              $sql = "select * from `product`";
-
-                              if ($result = mysqli_query($con, $sql)) {
-
-                                  // Return the number of rows in result set
-                                  $rowcount = mysqli_num_rows( $result );
-
-                                  // Display result
-                                  $rowcount;
-
-                                  echo $rowcount;
-                               }
-                          ?>
-                      </h1>
-                        <span>Products</span>
-                    </div>
-                    <div>
-                        <span class="las la-book"></span>
-                    </div>
-                </div>
-                    <div class="card-single">
-                    <div>
-                      <h1>
-                        <?php
-                              $hostname = "localhost";
-                              $username = "root";
-                              $password = "mysql";
-                              $database = "order";
-
-                              $con = mysqli_connect($hostname, $username, $password, $database) or die("Database connection failed.");
-
-                              $sql = "select * from `order`";
-
-                              if ($result = mysqli_query($con, $sql)) {
-
-                                  // Return the number of rows in result set
-                                  $rowcount = mysqli_num_rows( $result );
-
-                                  // Display result
-                                  $rowcount;
-
-                                  echo $rowcount;
-                               }
-                          ?>
-                      </h1>
-                        <span>Orders</span>
-                    </div>
-                    <div>
-                        <span class="las la-shopping-bag"></span>
-                    </div>
-                    </div>
-                    <div class="card-single">
-                    <div>
-                       <h1>
-                         <?php
-                               $hostname = "localhost";
-                               $username = "root";
-                               $password = "mysql";
-                               $database = "login_register";
-
-                               $con = mysqli_connect($hostname, $username, $password, $database) or die("Database connection failed.");
-
-                               $sql = "select * from staff";
-
-                               if ($result = mysqli_query($con, $sql)) {
-
-                                   // Return the number of rows in result set
-                                   $rowcount = mysqli_num_rows( $result );
-
-                                   // Display result
-                                   $rowcount;
-
-                                   echo $rowcount;
-                                }
-                           ?>
-                       </h1>
-                       <span>Staffs</span>
-                    </div>
-                    <div>
-                        <span class="las la-money-bill-wave"></span>
-                    </div>
-                    </div>
-            </div>
 
             <div class="recent-grid">
                 <div class="projects">
@@ -205,32 +79,37 @@
                             <table width="100%">
                             <thead>
                                 <tr>
-                                  <td>Customers</td>
-                                  <td>Products</td>
+                                  <td>Invoice ID</td>
+                                  <td>email</td>
+                                  <td>Product</td>
                                   <td>Status</td>
                                   <td>Invoice</td>
                                 </tr>
                             </thead>
                             <tbody>
                               <?php
-
                               $server = "localhost";
                               $username = "root";
                               $password = "mysql";
                               $dbname = "order";
-                              $conn = mysqli_connect($server, $username, $password, $dbname);
-                              $sql = "select * from `order`";
-                              $result = $conn-> query($sql);
-
-
-                              if ($result->num_rows > 0) {
-                                  while ($row = $result -> fetch_assoc()) {
-                                    echo "</tr><td>" . $row["id"] . "</td><td>" . $row["product"] . "</td><td>" .
-                                    $row["status"] ?> <td><a href="report.php?action=add&id=<?php echo $row["id"]; ?>"><i class='bx bxs-report'></i></a></td>
-                                    <?php
-                                  }
+                              $con = mysqli_connect($server, $username, $password, $dbname);
+                              if(!$con){
+                                  die('Error ' . mysqli_connect_error());
                               }
-                                  $conn -> close();
+
+                              $sql = 'select * from invoice inner join customer on invoice.customer_id = customer.customer_id';
+
+                              $result = mysqli_query($con, $sql);
+                              if (mysqli_num_rows($result) > 0) {
+                                while($row = mysqli_fetch_array($result)) {
+                                  echo "</tr><td>" . $row["invoice_id"] . "</td><td>" . $row["customer_email"] . "</td><td>" . $row["customer_contact"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["order_quantity"] . "</td><td>" . $row["product_price"] . "</td><td>" . $row["order_status"] ;
+
+                                  // echo "</tr><td>" . $row["status"] ?> <td><a href="report.php?action=add&id=<?php echo $row["id"]; ?>"><i class='bx bxs-report'></i></a></td>
+                                  <?php
+                                }
+                              } else {
+                              }
+                                  $con -> close();
                                    ?>
                             </tbody>
                         </table>

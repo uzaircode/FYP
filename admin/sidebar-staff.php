@@ -19,6 +19,9 @@
                 <a href="vieworder.php"><span class="las la-shopping-bag"></span><span>Orders</span></a>
             </li>
             <li>
+                <a href="viewinvoice.php"><span class="las la-lock"></span><span>Invoices</span></a>
+            </li>
+            <li>
                 <a href="loginadmin.php"><span class="las la-lock"></span><span>Log Out</span></a>
             </li>
         </ul>

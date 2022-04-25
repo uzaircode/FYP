@@ -1,51 +1,4 @@
-<?php
-session_start();
-error_reporting(E_ALL ^ E_NOTICE);
 
-
-$hostname = "localhost";
-$username = "root";
-$password = "mysql";
-$database = "product";
-
-$connect = mysqli_connect($hostname, $username, $password, $database) or die("Database connection failed.");
-if (isset($_POST["add_to_cart"])) {
-    if (isset($_SESSION["shopping_cart"])) {
-        $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
-        if (!in_array($_GET["id"], $item_array_id)) {
-            $count = count($_SESSION["shopping_cart"]);
-            $item_array = array(
-                    'item_id'               =>     $_GET["id"],
-                    'item_name'               =>     $_POST["hidden_name"],
-                    'item_price'          =>     $_POST["hidden_price"],
-                    'item_quantity'          =>     $_POST["quantity"]
-               );
-            $_SESSION["shopping_cart"][$count] = $item_array;
-        } else {
-            // echo '<script>alert("Item Already Added")</script>';
-            // echo '<script>window.location="notebook-productdetails.php"</script>';
-        }
-    } else {
-        $item_array = array(
-               'item_id'               =>     $_GET["id"],
-               'item_name'               =>     $_POST["hidden_name"],
-               'item_price'          =>     $_POST["hidden_price"],
-               'item_quantity'          =>     $_POST["quantity"]
-          );
-        $_SESSION["shopping_cart"][0] = $item_array;
-    }
-}
-if (isset($_GET["action"])) {
-    if ($_GET["action"] == "delete") {
-        foreach ($_SESSION["shopping_cart"] as $keys => $values) {
-            if ($values["item_id"] == $_GET["id"]) {
-                unset($_SESSION["shopping_cart"][$keys]);
-                echo '<script>alert("Item Removded")</script>';
-            }
-        }
-    }
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -66,6 +19,52 @@ if (isset($_GET["action"])) {
   <body id="main">
     <?php include("./assets/php/header.php"); ?>
 
+    <?php
+
+    $hostname = "localhost";
+    $username = "root";
+    $password = "mysql";
+    $database = "order";
+
+    $connect = mysqli_connect($hostname, $username, $password, $database) or die("Database connection failed.");
+    if (isset($_POST["add_to_cart"])) {
+        if (isset($_SESSION["shopping_cart"])) {
+            $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
+            if (!in_array($_GET["product_id"], $item_array_id)) {
+                $count = count($_SESSION["shopping_cart"]);
+                $item_array = array(
+                        'item_id'               =>     $_GET["product_id"],
+                        'item_name'               =>     $_POST["hidden_name"],
+                        'item_price'          =>     $_POST["hidden_price"],
+                        'item_quantity'          =>     $_POST["quantity"]
+                   );
+                $_SESSION["shopping_cart"][$count] = $item_array;
+            } else {
+                // echo '<script>alert("Item Already Added")</script>';
+                // echo '<script>window.location="notebook-productdetails.php"</script>';
+            }
+        } else {
+            $item_array = array(
+                   'item_id'               =>     $_GET["product_id"],
+                   'item_name'               =>     $_POST["hidden_name"],
+                   'item_price'          =>     $_POST["hidden_price"],
+                   'item_quantity'          =>     $_POST["quantity"]
+              );
+            $_SESSION["shopping_cart"][0] = $item_array;
+        }
+    }
+    if (isset($_GET["action"])) {
+        if ($_GET["action"] == "delete") {
+            foreach ($_SESSION["shopping_cart"] as $keys => $values) {
+                if ($values["item_id"] == $_GET["product_id"]) {
+                    unset($_SESSION["shopping_cart"][$keys]);
+                    echo '<script>alert("Item Removded")</script>';
+                }
+            }
+        }
+    }
+    ?>
+
 
 
     <div class="productdetails-section">
@@ -73,22 +72,25 @@ if (isset($_GET["action"])) {
         <div class="productdetails-box-left">
           <div>
                <?php
-               $query = "SELECT * FROM product where id= '1'";
+               if(isset($_GET['product_id'])){
+                 $id = $_GET['product_id'];
+
+               $query = "select * from product where product_id ='$id'";
 
                $result = mysqli_query($connect, $query);
                if ($result && mysqli_num_rows($result) > 0) {
                    while ($row = mysqli_fetch_array($result)) {
                        ?>
-                       <h1><?php echo $row["name"]; ?></h1>
-                       <h2><?php echo $row["price"]; ?></h2>
-                       <p><?php echo $row["description"]; ?></p>
+                       <h1><?php echo $row["product_name"]; ?></h1>
+                       <h2><?php echo "RM",$row["product_price"]; ?></h2>
+                       <p><?php echo $row["product_description"]; ?></p>
 
                <div class="col-md-4">
-                    <form class="productdetails-php" method="post" action="notebook-productdetails.php?action=add&id=<?php echo $row["id"]; ?>">
+                    <form class="productdetails-php" method="post" action="notebook-productdetails.php?action=add&product_id=<?php echo $row["product_id"]; ?>">
                            <!-- <img  src="'.$row['image'].'" /> -->
                            <!-- <img src="<?php echo $row["image"]; ?>" class="img-responsive" /><br />   -->
-                            <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
-                            <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
+                            <input type="hidden" name="hidden_name" value="<?php echo $row["product_name"]; ?>" />
+                            <input type="hidden" name="hidden_price" value="<?php echo $row["product_price"]; ?>" />
                             <button onclick="help()" type="submit" name="add_to_cart" class="btn-success" value="Add to Cart">Add to Cart</button>
                             <input class="productdetails-quantity" type="text" name="quantity" value="1" />
                     </form>
@@ -124,24 +126,43 @@ if (isset($_GET["action"])) {
                <?php
                    }
                }
+             }
                ?>
           </div>
 
-
-        <div class="productdetails-box-right">
           <?php
-          $query = "SELECT * FROM product where id= '1'";
+          if(isset($_GET['product_id'])){
+            $id = $_GET['product_id'];
+
+          $query = "select * from product where product_id ='$id'";
 
           $result = mysqli_query($connect, $query);
           if ($result && mysqli_num_rows($result) > 0) {
               while ($row = mysqli_fetch_array($result)) {
-                  ?>
-          <?php echo "<img src='images/product_images/".$row['image']."' >"; ?>
-          <?php
+                ?>
+                <div class="productdetails-box-right">
+                  <?php
+                  $query = "select * from product where product_id ='$id'";
+
+                  $result = mysqli_query($connect, $query);
+                  if ($result && mysqli_num_rows($result) > 0) {
+                      while ($row = mysqli_fetch_array($result)) {
+                          ?>
+                  <?php echo "<img src='images/product_images/".$row['product_image']."' >"; ?>
+                  <?php
+                      }
+                    }
+                }
               }
-          }
-          ?>
-        </div>
+                  }
+                  ?>
+                </div>
+
+
+
+
+
+
 
     </div>
 

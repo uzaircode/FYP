@@ -1,26 +1,45 @@
 <?php
+session_start();
 
 $server = "localhost";
 $username = "root";
 $password = "mysql";
 $dbname = "order";
-
+$sql = "select * from `order`";
 
 $conn = mysqli_connect($server, $username, $password, $dbname);
 
 if (isset($_POST['submit'])) {
-    if (!empty($_POST['name'])) {
-        $email = $_POST['name'];
 
-        $query = "insert into `order` (email) values ('$email')";
 
-        $run = mysqli_query($conn, $query) or die(mysqli_error($conn));
-        if ($run) {
-            header('Location: shoppingcart-done.php');
-        } else {
-            echo "not working!";
-        }
-    } else {
-        echo "all fields required";
+  $customer_id = $_SESSION['id'];
+
+
+
+
+    foreach ($_SESSION["shopping_cart"] as $keys => $values)
+    {
+      $count = $count + 1;
+      for ($i=0; $i <$count ; $i++) {
+        $total = 0;
+        $product = $values["item_name"];
+        $product_id = $values["item_id"];
+        $item_price = $values["item_price"];
+        $quantity = $values['item_quantity'];
+
+        $total = $total + ($quantity * $item_price);
+        $subtotal = $values[$total];
+
+
+        $query = "insert into `order`(customer_id,product_id,order_quantity,order_subtotal,order_status) values ('$customer_id','$product_id','$quantity',$total,'Pending')";
+      }
+
+      $run = mysqli_query($conn, $query) or die(mysqli_error($conn));
     }
+
+  if ($run) {
+    header("Location:shoppingcart-done.php");
+  } else {
+      echo "not working!";
+  }
 }

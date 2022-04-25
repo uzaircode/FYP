@@ -1,10 +1,12 @@
 <?php
 session_start();
-error_reporting(E_ALL & ~E_NOTICE);
-ini_set('display_errors', 1);
+
+
+
 $login = "";
 $dashboard = "";
-    if (isset($_SESSION["email"]) && !empty($_SESSION["email"]) && $user_data['password'] === $password) {
+
+    if (!empty($_SESSION["customer_email"])) {
         $login = "style='display:none;'";
         $dashboard = "style='display:inline;'";
     } else {
@@ -28,8 +30,6 @@ $dashboard = "";
     <ul class="nav_links">
       <li><a href="aboutUs.php">ABOUT US</a></li>
       <li><a href="notebook-productlist.php">NOTEBOOKS</a></li>
-      <li><a href="#">STATIONERY</a></li>
-      <li><a href="#">WEDDING</a></li>
       <li><i class="fas fa-shopping-bag" style="font-size:25px;cursor:pointer" onclick="openNav()"></i></li>
       <li <?php echo $login;?>><a href="login.php"><i class="fas fa-user" style="font-size:25px;cursor:pointer" onclick="openNav()"></i></li></a>
       <li <?php echo $dashboard;?>><a href="dashboard.php"><i class="fa fa-user-check" style="font-size:25px;cursor:pointer" onclick="openNav()"></i></li></a>
@@ -57,25 +57,18 @@ $dashboard = "";
                    <th width="5%">Action</th>
               </tr>
               <?php if (empty($_SESSION["shopping_cart"])): ?>
-                <!-- <h2 id ="doThis" href="#" style="display:block">Your cart is empty</h2> -->
               <?php endif; ?>
               <?php
               if (!empty($_SESSION["shopping_cart"])) {
                   $total = 0;
                   foreach ($_SESSION["shopping_cart"] as $keys => $values) {
                       ?>
-                      <script>
-                      document.getElementById("doThiss").style.display = "none";
-                      </script>
-                      <!-- <h2 id ="doThiss" href="#" style="display:block; padding-top:20px; padding-bottom:20px; text-align:center;">Your shopping cart</h2> -->
-
               <tr>
                    <td><?php echo $values["item_name"]; ?></td>
                    <td><?php echo $values["item_quantity"]; ?></td>
                    <td>$ <?php echo $values["item_price"]; ?></td>
                    <td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>
-                   <td><a class="text-danger" href="notebook-productdetails.php?action=delete&id=<?php echo $values["item_id"]; ?>"><i class="far fa-times-circle" style="font-size:26px; margin:auto;"></i></a></td>
-
+                   <td><a class="text-danger" href="notebook-productdetails.php?action=delete&product_id=<?php echo $values["item_id"]; ?>"><i class="far fa-times-circle" style="font-size:26px; margin:auto;"></i></a></td>
               </tr>
               <?php
                         $total = $total + ($values["item_quantity"] * $values["item_price"]);
@@ -91,25 +84,8 @@ $dashboard = "";
               ?>
          </table>
 
-         <button onclick="shoppingCart()" type="button" name="button" class="checkout-shoppingcart">Go to cart</button>
+         <button type="button" name="button" class="checkout-shoppingcart"><a href="empty.php" style="color:white;">Go to cart</a></button>
   </div>
-
-  <!-- <div>
-    <hr id ="hr-shoppingcart" style="display:none">
-    <h2 id ="doThisz" href="#" style="display:none"><?php echo $values["item_name"]; ?></h2>
-    <div class="quantity-shoppingcart">
-      <h2 id ="doThiszzd"style="display:none;">Quantity  : </h2>
-      <a href="#" id="counter-label" style="display:none;">0</a>
-    </div>
-    <hr id ="doThiszz" style="display:none">
-    <div class="subtotal-shoppingcart">
-      <h2 id ="doThisze" href="#" style="display:none">Subtotal :</h2>
-      <a id ="doThiszee" href="#" style="display:none;">RM29.90</a>
-    </div>
-    <hr id ="doThiszzz" style="display:none">
-    <button onclick="shoppingCart()" id ="checkout-shoppingcart" type="button" name="button" style="display:none">Check Out</button>
-    <button onclick="closeNav()" id ="keepshopping-shoppingcart" type="button" name="button" style="display:none">Keep Shopping</button>
-  </div> -->
 </div>
 
 

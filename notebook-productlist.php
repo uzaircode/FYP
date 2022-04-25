@@ -28,9 +28,9 @@
       $hostname = "localhost";
       $username = "root";
       $password = "mysql";
-      $database = "product";
+      $database = "order";
 
-      $connect = mysqli_connect($hostname, $username, $password, $database) or die("Database connection failed.");
+
       // $user_data = check_login($con);
 
     ?>
@@ -41,189 +41,50 @@
       </div>
       <div class="product-list">
 
-    <?php
-    $query = "SELECT * FROM product where id= '1'";
 
+    <?php
+
+    $query = "select * from product order by product_id ASC";
+    $connect = mysqli_connect($hostname, $username, $password, $database) or die("Database connection failed.");
     $result = mysqli_query($connect, $query);
-    if ($result && mysqli_num_rows($result) > 0) {
-        while ($row = mysqli_fetch_array($result)) {
+
+    $numResults = mysqli_num_rows($result);
+    $counter = 0;
+    while ($row = mysqli_fetch_array($result))
+    {
+        $product_id = $row["product_id"];
+          for ($i=0; $i < $numResults; $i++) {
             ?>
             <div class="product-list-box">
-              <a href="notebook-productdetails.php?action=add&id=<?php echo $row["id"]; ?>">
+              <a href="notebook-productdetails.php?action=add&product_id=<?php echo $product_id; ?>">
               <div class="product-list-details">
                 <?php
                 $server = "localhost";
                 $username = "root";
                 $password = "mysql";
-                $dbname = "product";
+                $dbname = "order";
                 $conn = mysqli_connect($server, $username, $password, $dbname);
-                $sql = "select * from product";
+                $sql = "select * from product where product_id = '$product_id'";
                 $result = $conn-> query($sql);
 
                 if ($result->num_rows > 0) {
                     while ($row = $result -> fetch_assoc()) {
-                      echo "<img src='images/product_images/".$row['image']."' >";
+                      echo "<img src='images/product_images/".$row['product_image']."' >";
                     }
                 } else {
                 }
-                    $conn -> close();
+                $conn -> close();
                 ?>
-                <div class="overlay" style="background-color:#ff9678">
-                  <div class="text-price">
-                    <?php
-                    $server = "localhost";
-                    $username = "root";
-                    $password = "mysql";
-                    $dbname = "product";
-                    $conn = mysqli_connect($server, $username, $password, $dbname);
-                    $sql = "select * from product";
-                    $result = $conn-> query($sql);
-
-                    if ($result->num_rows > 0) {
-                        while ($row = $result -> fetch_assoc()) {
-                          echo $row["price"];
-                        }
-                    } else {
-                    }
-                        $conn -> close();
-                    ?>
-                  </div>
-                  <div class="text">
-                    <?php
-                    $server = "localhost";
-                    $username = "root";
-                    $password = "mysql";
-                    $dbname = "product";
-                    $conn = mysqli_connect($server, $username, $password, $dbname);
-                    $sql = "select * from product";
-                    $result = $conn-> query($sql);
-
-                    if ($result->num_rows > 0) {
-                        while ($row = $result -> fetch_assoc()) {
-                          echo $row["name"];
-                        }
-                    } else {
-                    }
-                        $conn -> close();
-                    ?>
-                  </div>
-                </div>
               </div>
               </a>
             </div>
     <?php
+    ++$product_id;
         }
-    }
+  }
     ?>
 
 
-
-
-
-
-
-        <div class="product-list-box">
-          <div class="product-list-details">
-            <img src="images/floral-notebook.jpg" alt="">
-            <a href="notebook-productdetails.php">
-            <div class="overlay" style="background-color:#00ba6d">
-              <div class="text-price">RM29.90</div>
-              <div class="text">Floral Burst Notebook</div>
-            </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="product-list-box">
-          <div class="product-list-details">
-            <img src="images/oranges-notebook.jpg" alt="">
-            <div class="overlay" style="background-color:#192878">
-              <div class="text-price">RM29.90</div>
-              <div class="text">Oranges Notebook</div>
-            </div>
-          </div>
-        </div>
-        <div class="product-list-box">
-          <div class="product-list-details">
-            <img src="images/mirror2-notebook.jpg" alt="">
-            <div class="overlay" style="background-color:#ff9678">
-              <div class="text-price">RM29.90</div>
-              <div class="text">The Completist - Mirrors Notebook</div>
-            </div>
-          </div>
-        </div>
-        <div class="product-list-box">
-          <div class="product-list-details">
-            <img src="images/mirror-notebook.jpg" alt="">
-            <div class="overlay" style="background-color:#192878">
-              <div class="text-price">RM29.90</div>
-              <div class="text">The Completist - Mirrors Notebook</div>
-            </div>
-          </div>
-        </div>
-        <div class="product-list-box">
-          <div class="product-list-details">
-            <img src="images/memphis-notebook.jpg" alt="">
-            <div class="overlay" style="background-color:#ff9678">
-              <div class="text-price">RM29.90</div>
-              <div class="text">The Completist - Memphis Brush</div>
-            </div>
-          </div>
-        </div>
-        <div class="product-list-box">
-          <div class="product-list-details">
-            <img src="images/brush-notebook.jpg" alt="">
-            <div class="overlay" style="background-color:#dc9b14">
-              <div class="text-price">RM29.90</div>
-              <div class="text">The Completist - Giant Brush Notebook</div>
-            </div>
-          </div>
-        </div>
-        <div class="product-list-box">
-          <div class="product-list-details">
-            <img src="images/pinkcut-notebook.jpg" alt="">
-            <div class="overlay" style="background-color:#fd8899">
-              <div class="text-price">RM29.90</div>
-              <div class="text">The Completist - Pink Cut Notebook</div>
-            </div>
-          </div>
-        </div>
-        <div class="product-list-box">
-          <div class="product-list-details">
-            <img src="images/vintage-notebook.jpg" alt="">
-            <div class="overlay" style="background-color:#dc9b14">
-              <div class="text-price">RM29.90</div>
-              <div class="text">Stalogy 016 Vintage Notebook</div>
-            </div>
-          </div>
-        </div>
-        <div class="product-list-box">
-          <div class="product-list-details">
-            <img src="images/lavender-notebook.jpg" alt="">
-            <div class="overlay" style="background-color:#192878">
-              <div class="text-price">RM29.90</div>
-              <div class="text">Lavender Notebook</div>
-            </div>
-          </div>
-        </div>
-        <div class="product-list-box">
-          <div class="product-list-details">
-            <img src="images/yellow-notebook.jpg" alt="">
-            <div class="overlay" style="background-color:#dc9b14">
-              <div class="text-price">RM29.90</div>
-              <div class="text">Yellow Notebook</div>
-            </div>
-          </div>
-        </div>
-        <div class="product-list-box">
-          <div class="product-list-details">
-            <img src="images/bluelines-notebook.jpg" alt="">
-            <div class="overlay" style="background-color:#00ba6d">
-              <div class="text-price">RM29.90</div>
-              <div class="text">Blue Lines Notebook</div>
-            </div>
-          </div>
-        </div>
 
       </section>
 
@@ -234,3 +95,45 @@
 
 
   </html>
+
+  <!-- <div class="overlay" style="background-color:#fd8899">
+    <div class="text-price">
+      <?php
+      $server = "localhost";
+      $username = "root";
+      $password = "mysql";
+      $dbname = "product";
+      $conn = mysqli_connect($server, $username, $password, $dbname);
+
+      $sql = "select * from product where name = 'Floral Burst Notebook'";
+      $result = $conn-> query($sql);
+
+      if ($result->num_rows > 0) {
+          while ($row = $result -> fetch_assoc()) {
+            echo "RM", $row["price"];
+          }
+      } else {
+      }
+          $conn -> close();
+      ?>
+    </div>
+    <div class="text">
+      <?php
+      $server = "localhost";
+      $username = "root";
+      $password = "mysql";
+      $dbname = "product";
+      $conn = mysqli_connect($server, $username, $password, $dbname);
+      $sql = "select * from product where name = 'Floral Burst Notebook'";
+      $result = $conn-> query($sql);
+
+      if ($result->num_rows > 0) {
+          while ($row = $result -> fetch_assoc()) {
+            echo $row["name"];
+          }
+      } else {
+      }
+          $conn -> close();
+      ?>
+    </div>
+  </div> -->

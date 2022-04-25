@@ -12,19 +12,15 @@ $dashboard = "";
         $dashboard = "style='display:none;'";
         // do something else
     }
-
-
-
-
-    ?>
+?>
 
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Faqs</title>
-    <link rel="shortcut icon" href="images/favicon.png"/>
+    <title>Shipping & Payment - Paper Street</title>
+    <link rel="icon" href="images/favicon/duck.ico"/>
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -61,66 +57,34 @@ $dashboard = "";
 
     <section class="shoppingcart-shipping-container">
 
-
-      <div class="shoppingcart-shipping">
-        <form action="insertorder.php" method="post">
-          <div>
-            <div style="width:100%;">
-              <label for="name" class="username">FIRST NAME</label> <br>
-              <input type="text" name="name" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
-            </div>
-          </div>
-          <label for="name" class="username" style="margin-top:10px;">COMPANY NAME (OPTIONAL)</label> <br>
-          <input type="text" name="f" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
-
-          <label for="name" class="username">COUNTRY / REGION </label> <br>
-          <input type="text" name="e" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
-
-          <label for="name" class="username">STREET ADDRESS</label> <br>
-          <input type="text" name="e" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
-          <input type="text" name="d" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
-
-          <label for="name" class="username">CITY</label> <br>
-          <input type="text" name="d" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
-
-          <label for="name" class="username">STATE</label> <br>
-          <input type="text" name="d" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
-
-          <label for="name" class="username">POSTCODE</label> <br>
-          <input type="text" name="d" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
-
-          <label for="name" class="username">PHONE</label> <br>
-          <input type="text" name="d" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
-
-          <label for="name" class="username">EMAIL ADDRESS</label> <br>
-          <input type="text" name="d" size="50" class="field-input" style="padding-left:5px; margin-bottom:15px;"> <br>
-      </div>
       <div class="container-shipping">
         <h1>Confirm Your Payment</h1>
+        <form action="insertorder.php" method="post" class="shoppingcart-shipping-form">
         <div class="first-row-shipping">
           <div class="owner">
             <h3>Owner</h3>
             <div class="input-field-shipping">
-              <input type="text">
+              <input type="text" title="email"  pattern="[a-zA-Z]*"  >
             </div>
           </div>
           <div class="cvv">
             <h3>CVV</h3>
             <div class="input-field-shipping">
-              <input type="password">
+              <input type="phone" pattern="[0-9]{3}" >
             </div>
+            <br>
           </div>
         </div>
         <div class="second-row">
           <div class="card-number">
             <h3>Card Number</h3>
             <div class="input-field-shipping">
-              <input type="text">
+              <input type="phone" pattern="[0-9]{12}" >
             </div>
           </div>
         </div>
+        <br>
         <div class="third-row">
-          <h3>Card Number</h3>
           <div class="selection">
             <div class="date">
               <select name="months" id="months">
@@ -138,12 +102,12 @@ $dashboard = "";
                 <option value="Dec">Dec</option>
               </select>
               <select name="years" id="years">
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
-                <option value="2017">2017</option>
-                <option value="2016">2016</option>
-                <option value="2015">2015</option>
+                <option value="2020">2023</option>
+                <option value="2019">2022</option>
+                <option value="2018">2021</option>
+                <option value="2017">2020</option>
+                <option value="2016">2019</option>
+                <option value="2015">2018</option>
               </select>
             </div>
             <div class="cards-shipping" style="margin-right:120px;">
@@ -152,7 +116,8 @@ $dashboard = "";
             </div>
           </div>
         </div>
-        <a class="button-shipping"><button type="submit" name="submit" >CONFIRM PAYMENT</button></a>
+        <br>
+        <a class="button-shipping"><button type="submit" name="submit">CONFIRM PAYMENT</button></a>
       </div>
     </form>
     </section>

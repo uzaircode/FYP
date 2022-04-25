@@ -57,7 +57,7 @@
     </div>
 
     <div class="footer-menu-bottom">
-      <p style="text-decoration:none; cursor:default;">© 2022 Papier</p>
+      <p style="text-decoration:none; cursor:default;">© 2022 Paper Street</p>
       <a href="privacy.php">
         <p>Privacy</p>
       </a>

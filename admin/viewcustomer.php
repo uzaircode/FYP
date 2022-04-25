@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,27 +18,8 @@
         <div class="sidebar-brand">
           <h2><span class="las la-user-circle"></span> <span>Paper Street</span></h2>
         </div>
-        <div class="sidebar-menu">
-            <ul>
-                <li>
-                    <a href="dashboard.php"><span class="las la-igloo"></span><span>Dashboard</span></a>
-                <li>
-                    <a href="viewstaff.php"><span class="las la-heart"></span><span>Staffs</span></a>
-                </li>
-                <li>
-                    <a href="viewcustomer.php" class="active"><span class="las la-users"></span><span>Customers</span></a>
-                </li>
-                <li>
-                  <a href="viewproduct.php"><span class="las la-book"></span><span>Products</span></a>
-                </li>
-                <li>
-                    <a href="vieworder.php"><span class="las la-shopping-bag"></span><span>Orders</span></a>
-                </li>
-                <li>
-                    <a href="loginadmin.php"><span class="las la-lock"></span><span>Log Out</span></a>
-                </li>
-            </ul>
-        </div>
+        <?php include("sidebar-customer.php"); ?>
+
     </div>
     <div class="main-content">
         <header>
@@ -48,61 +30,23 @@
                 Dashboard
             </h2>
 
-            <div class="user-wrapper">
+            <!-- <div class="user-wrapper">
               <img src="../admin/staff-image/uzair.jpg" width="40px" height="40px" alt="">
                 <div>
                     <h4>Nik Ahmad Uzair</h4>
                     <small>Super admin</small>
                 </div>
-            </div>
+            </div> -->
         </header>
         <main>
-            <div class="cards">
-                <div class="card-single card-highlight">
-                    <div>
-                        <h1>0</h1>
-                        <span>Customers</span>
-                    </div>
-                    <div>
-                        <span class="las la-users"></span>
-                    </div>
-                    </div>
-                <div class="card-single">
-                    <div>
-                        <h1>0</h1>
-                        <span>Messages</span>
-                    </div>
-                    <div>
-                        <span class="las la-envelope"></span>
-                    </div>
-                </div>
-                    <div class="card-single">
-                    <div>
-                        <h1>0</h1>
-                        <span>Orders</span>
-                    </div>
-                    <div>
-                        <span class="las la-shopping-bag"></span>
-                    </div>
-                    </div>
-                    <div class="card-single">
-                    <div>
-                       <h1>0</h1>
-                       <span>Staffs</span>
-                    </div>
-                    <div>
-                        <span class="las la-money-bill-wave"></span>
-                    </div>
-                    </div>
-            </div>
+          <?php include("card-header-customer.php"); ?>
+
 
             <div class="recent-grid">
                 <div class="projects">
                     <div class="card">
                     <div class="card-header">
                         <h3>Recent Customer</h3>
-
-                        <a href="addcustomer.html">Add Customer <span class="las la-arrow-right"></span></a>
                     </div>
 
                     <div class="card-body">
@@ -110,22 +54,37 @@
                             <table width="100%">
                             <thead>
                                 <tr>
-                                    <td>Customers</td>
-                                    <td>Products</td>
-                                    <td>Status</td>
-                                    <td>Edit</td>
+                                  <td>Customer ID</td>
+                                  <td>Email</td>
+                                  <td>Password</td>
+                                  <td>Home Address</td>
+                                  <td>City</td>
+                                  <td>State</td>
+                                  <td>Postcode</td>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Syafiq Shah</td>
-                                    <td>Neqah Shawl Bridal In Light Blue</td>
-                                    <td>
-                                        <span class="status purple"></span>
-                                        Delivered
-                                    </td>
-                                    <td><a href="editcust.html"><i class='bx bxs-edit' ></i></a></td>
-                                </tr>
+                              <?php
+
+                              $server = "localhost";
+                              $username = "root";
+                              $password = "mysql";
+                              $dbname = "order";
+                              $conn = mysqli_connect($server, $username, $password, $dbname);
+                              $sql = "select * from customer";
+                              $result = $conn-> query($sql);
+
+
+                              if ($result->num_rows > 0) {
+                                  while ($row = $result -> fetch_assoc()) {
+                                    echo "</tr><td>" . $row["customer_id"] . "</td><td>" . $row["customer_email"] . "</td><td>" . $row["customer_password"] . "</td><td>" . $row["customer_address"] . "</td><td>" . $row["customer_city"] . "</td><td>" . $row["customer_state"] . "</td><td>" . $row["customer_postcode"];
+                                  }
+                              } else {
+                              }
+                                  $conn -> close();
+
+                              ?>
+
                             </tbody>
                         </table>
                         </div>
@@ -137,7 +96,6 @@
                     <div class="card">
                     <div class="card-header">
                         <h3>Staffs</h3>
-
                     </div>
 
                     <div class="card-body">

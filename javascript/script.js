@@ -47,35 +47,18 @@ function closeNav() {
 var counterVal = 0;
 
 
-function help() {
-  updateDisplay(++counterVal);
 
-  openNav();
-  // document.getElementById("doThisz").style.display = "block";
-  // document.getElementById("doThiszz").style.display = "block";
-  // document.getElementById("doThiszzd").style.display = "block";
-  // document.getElementById("doThiszzz").style.display = "block";
-  // document.getElementById("doThisze").style.display = "block";
-  // document.getElementById("doThiszee").style.display = "block";
-  // document.getElementById("checkout-shoppingcart").style.display = "block";
-  // document.getElementById("keepshopping-shoppingcart").style.display = "block";
-  document.getElementById("doThis").style.display = "none";
-  // document.getElementById("counter-label").style.display = "block";
-
-}
 
 function updateDisplay(val) {
     document.getElementById("counter-label").innerHTML = val;
 }
 
 function shoppingCart() {
-  window.location.href = "shoppingcart.php";
+  session_start();
+  if (empty($_SESSION["email"])) {
+    window.location.href = "shoppingcart.php";
+  }
 }
-
-
-
-
-
 
 function openCity(evt, cityName) {
   // Declare all variables

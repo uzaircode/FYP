@@ -1,11 +1,10 @@
 <?php
 session_start();
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL ^ E_NOTICE);
 ini_set('display_errors', 1);
 $login = "";
 $dashboard = "";
     if (isset($_SESSION["email"]) && !empty($_SESSION["email"])) {
-        echo "Welcome, {$_SESSION["email"]} <br>";
         $login = "style='display:none;'";
         $dashboard = "style='display:inline;'";
     } else {
@@ -21,16 +20,14 @@ $dashboard = "";
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Faqs</title>
-    <link rel="shortcut icon" href="images/favicon.png"/>
+    <title>Payment Success - Paper Street</title>
+    <link rel="icon" href="images/favicon/duck.ico"/>
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <link rel="icon" href="/images/favicon.png">
 
 
 

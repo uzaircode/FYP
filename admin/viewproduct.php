@@ -17,27 +17,8 @@
         <div class="sidebar-brand">
           <h2><span class="las la-user-circle"></span> <span>Paper Street</span></h2>
         </div>
-        <div class="sidebar-menu">
-            <ul>
-                <li>
-                    <a href="dashboard.php"><span class="las la-igloo"></span><span>Dashboard</span></a>
-                <li>
-                    <a href="viewstaff.php"><span class="las la-heart"></span><span>Staffs</span></a>
-                </li>
-                <li>
-                    <a href="viewcustomer.php"><span class="las la-users"></span><span>Customers</span></a>
-                </li>
-                <li>
-                  <a href="viewproduct.php" class="active"><span class="las la-book"></span><span>Products</span></a>
-                </li>
-                <li>
-                    <a href="vieworder.php"><span class="las la-shopping-bag"></span><span>Orders</span></a>
-                </li>
-                <li>
-                    <a href="loginadmin.php"><span class="las la-lock"></span><span>Log Out</span></a>
-                </li>
-            </ul>
-        </div>
+        <?php include("sidebar-product.php"); ?>
+
     </div>
     <div class="main-content">
         <header>
@@ -48,77 +29,41 @@
 
                 Dashboard
             </h2>
-            <div class="search-wrapper">
-                <span class="las la-search"></span>
-                <input type="search" placeholder="search here..." />
-            </div>
 
-            <div class="user-wrapper">
+            <!-- <div class="user-wrapper">
               <img src="../admin/staff-image/uzair.jpg" width="40px" height="40px" alt="">
                 <div>
                     <h4>Nik Ahmad Uzair</h4>
                     <small>Super admin</small>
                 </div>
-            </div>
+            </div> -->
         </header>
         <main>
-            <div class="cards">
-                <div class="card-single">
-                    <div>
-                        <h1>0</h1>
-                        <span>Customers</span>
-                    </div>
-                    <div>
-                        <span class="las la-users"></span>
-                    </div>
-                    </div>
-                <div class="card-single">
-                    <div>
-                        <h1>0</h1>
-                        <span>Messages</span>
-                    </div>
-                    <div>
-                        <span class="las la-envelope"></span>
-                    </div>
-                </div>
-                    <div class="card-single">
-                    <div>
-                        <h1>0</h1>
-                        <span>Orders</span>
-                    </div>
-                    <div>
-                        <span class="las la-shopping-bag"></span>
-                    </div>
-                    </div>
-                    <div class="card-single">
-                    <div>
-                        <h1>0</h1>
-                        <span>Staffs</span>
-                    </div>
-                    <div>
-                        <span class="las la-money-bill-wave"></span>
-                    </div>
-                    </div>
-            </div>
+          <?php include("card-header-product.php"); ?>
+
 
             <div class="recent-grid">
                 <div class="projects">
                     <div class="card">
                     <div class="card-header">
                         <h3>Recent Product</h3>
+                        <div>
+                          <a href="editproduct.php">Edit/Delete Product <span class="las la-arrow-right"></span></a>
+                          <a href="addproduct.php">Add Product <span class="las la-arrow-right"></span></a>
 
-                         <a href="addproduct.php">Add Product <span class="las la-arrow-right"></span></a>
+                        </div>
                     </div>
-
                     <div class="card-body">
                         <div class="table-responsive">
                             <table width="100%">
                             <thead>
                                 <tr>
-                                    <td>Products Name</td>
+                                    <td>Product ID</td>
+                                    <td>Product Name</td>
+                                    <td>Product Image</td>
+                                    <td>Category</td>
+                                    <td>Description</td>
                                     <td>Price</td>
-                                    <td>Categories</td>
-                                    <td>Edit</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -127,19 +72,18 @@
                               $server = "localhost";
                               $username = "root";
                               $password = "mysql";
-                              $dbname = "product";
+                              $dbname = "order";
                               $conn = mysqli_connect($server, $username, $password, $dbname);
                               $sql = "select * from product";
                               $result = $conn-> query($sql);
 
                               if ($result->num_rows > 0) {
                                   while ($row = $result -> fetch_assoc()) {
-                                      echo "</tr><td>" . $row["id"] . "</td><td>" . $row["name"] . "</td><td>" . $row["image"] . "</td><td>"  . $row["price"];
+                                      echo "</tr><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["product_image"] . "</td><td>" . $row["product_category"] . "</td><td>" . $row["product_description"] . "</td><td>" . "RM" .$row["product_price"];
                                   }
                               } else {
                               }
                                   $conn -> close();
-
                               ?>
                             </tbody>
                         </table>

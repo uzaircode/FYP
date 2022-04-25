@@ -7,19 +7,19 @@ error_reporting(E_ALL ^ E_NOTICE);
 
   if (isset($_POST['Submit'])) {
       $email = $_POST['email'];
-      $password = $_POST["password"];
+      $backup_code = $_POST["backup_code"];
       $npwd = $_POST['npwd'];
 
-      $query = mysqli_query($con, "SELECT email,password from users where email = '$email' AND password ='$password'");
+      $query = mysqli_query($con, "SELECT email,backup_code from users where email = '$email' AND backup_code ='$backup_code'");
       $num = mysqli_fetch_array($query);
 
       if ($num>0) {
         echo '<script>alert("Password successfully reset.")</script>';
         $con = mysqli_query($con, "UPDATE users set password = '$npwd' where email = '$email'");
-        header("Location: dashboard.php");
+        header("Location: login.php");
 
       } else {
-        echo '<script>alert("Wrong password!")</script>';
+        echo '<script>alert("Wrong Backup Code!")</script>';
       }
   }
 
@@ -61,8 +61,8 @@ error_reporting(E_ALL ^ E_NOTICE);
             <input id="email" type="text" name="email" required>
           </div>
           <div class="data">
-          <span>Old Password</span>
-                    <input id="new_password" type="password" name="password" id="password" required>
+          <span>Backup Code</span>
+                    <input id="new_password" type="password" name="backup_code" id="password" required>
                   </div>
           <div class="data">
           <span>New Password</span>

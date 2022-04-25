@@ -1,0 +1,224 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.accountDetails
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.title-acc
+{
+    margin-top: 100px;
+}
+.acc-detail
+{
+    max-width: 700px;
+    width:100%;
+    padding: 25px 30px;
+
+}
+
+.acc-detail .acc-title
+{
+    font-size:25px;
+    font-weight: 500;
+     position: relative;
+}
+
+.acc-detail .acc-title::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width:30px;
+    background: #1B1B1B;
+}
+
+.acc-detail form .user-details
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:20px 0 12px 0;
+}
+
+form .user-details .input-box
+{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details
+{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input
+{
+    height:45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    padding-left: 15px;
+    font-size:16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+
+}
+
+.user-details .input-box select
+{
+    height:45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    padding-left: 15px;
+    font-size:16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+
+}
+
+form .gender-details .gender-title
+{
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+form .gender-details .category
+{
+    display:flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+.gender-details .category label
+{
+    display: flex;
+
+}
+
+.gender-details .category .dot
+{
+    height:18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border:5px solid transparent;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two
+{
+    border-color: #d9d9d9;
+    background:#98cfd5;
+}
+
+form input[type="radio"]
+{
+    display:none;
+}
+
+form .bttn{
+    height: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+form .bttn1{
+    height:30px;
+    display: inline-block;
+}
+
+form .bttn input
+{
+  height: 100%;
+  outline:none;
+  width:120px;
+  margin-left: 195px;
+  color: #FFFFFF;
+  border:none;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: #000000;
+  cursor: pointer;
+}
+
+form .bttn input:hover
+{
+  background: #FFFFFF;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+form .bttn1 input
+{
+    height: 100%;
+    outline:none;
+    width:120px;
+    margin-left: 10px;
+    color: #FFFFFF;
+    border:none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: #000000;
+    cursor: pointer;
+}
+
+form .bttn1 input:hover
+{
+  background: #FFFFFF;
+  color: #000000;
+  border: 1px solid #000000;
+}
+@media (max-width: 1000px) {
+  .overview-boxes .box{
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 700px) {
+  nav .sidebar-button .dashboard,
+  nav .profile-details .admin_name,
+  nav .profile-details i{
+    display: none;
+  }
+  .home-section nav .profile-details{
+    height: 50px;
+    min-width: 40px;
+  }
+  .home-content .sales-boxes .sales-details{
+    width: 560px;
+  }
+}
+@media (max-width: 550px) {
+  .overview-boxes .box{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .sidebar.active ~ .home-section nav .profile-details{
+    display: none;
+  }
+}

@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -37,7 +39,7 @@
       <!-- <p>Nik Uzair</p> -->
 
       <p>Email</p>
-      <?php echo "{$_SESSION["email"]} <br>"; ?>
+      <?php echo "{$_SESSION["id"]} <br>"; ?>
 
       <button type="button" name="button" onclick="reset()">Edit Password</button>
     </div>
@@ -45,6 +47,16 @@
     <div id="Address" class="tabcontent">
       <h2>Home Address</h2>
       <p>Store your shipping addresses here to refer back to - only recently used addresses will appear at checkout. Please note, you cannot add address lists for envelope addressing here. Please ensure you add these on the envelope page of the appropriate product.</p>
+      <p>Email</p>
+      <?php echo "{$_SESSION["home_address"]} <br>"; ?>
+      <p>Email</p>
+      <?php echo "{$_SESSION["city"]} <br>"; ?>
+      <p>Email</p>
+      <?php echo "{$_SESSION["state"]} <br>"; ?>
+      <p>Email</p>
+      <?php echo "{$_SESSION["postcode"]} <br>"; ?>
+      <p>Email</p>
+      <?php echo "{$_SESSION["phone"]} <br>"; ?>
       <button type="button" name="button">Home Address</button>
     </div>
     <div id="Log-out" class="tabcontent">
@@ -70,8 +82,9 @@
     }
 
     function logout() {
-      window.location="login.php";
+      window.location="logout.php";
     }
+
     function reset() {
       window.location="password-reset.php";
     }

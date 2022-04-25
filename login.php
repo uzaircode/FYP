@@ -11,21 +11,30 @@ error_reporting(E_ALL ^ E_NOTICE);
       $email = $_POST['email'];
       $password = $_POST['password'];
 
-      $_SESSION["email"] = $email;
+      $_SESSION["customer_email"] = $email;
+
 
 
       if (!empty($email) && !empty($password)) {
 
           //read from database
-          $query = "select * from users where email = '$email' limit 1";
+          $query = "select * from customer where customer_email = '$email' limit 1";
           $result = mysqli_query($con, $query);
 
           if ($result) {
               if ($result && mysqli_num_rows($result) > 0) {
                   $user_data = mysqli_fetch_assoc($result);
 
-                  if ($user_data['password'] === $password) {
-                      $_SESSION['user_id'] = $user_data['user_id'];
+                  if ($user_data['customer_password'] === $password) {
+                    $_SESSION["id"] = $user_data['customer_id'];
+                      $_SESSION['backup_code'] = $user_data['customer_back_code'];
+                      $_SESSION["home_address"] = $user_data['customer_address'];
+                      $_SESSION["city"] = $user_data['customer_city'];
+                      $_SESSION["state"] = $user_data['customer_state'];
+                      $_SESSION["postcode"] = $user_data['customer_postcode'];
+                      $_SESSION["phone"] = $user_data['customer_contact'];
+
+
                       header("Location: dashboard.php");
                       die;
                   } else {
@@ -69,19 +78,19 @@ error_reporting(E_ALL ^ E_NOTICE);
           Log in
         </div>
         <form method="post">
-
           <div class="data">
             <span>Email</span>
             <input id="text" type="text" name="email" required>
           </div>
 
-  <div class="data">
-  <span>Password</span>
+          <div class="data">
+          <span>Password</span>
             <input id="text" type="password" name="password" required>
           </div>
 
   <div class="forgot-pass">
-  <a href="password-reset.php" type="submit" name="signup"></a></div>
+  <a href="forgot-password.php" type="submit" name="signup">Forgotten your password?</a>
+</div>
   <div class="btn">
             <div class="inner">
   </div>

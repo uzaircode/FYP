@@ -1,7 +1,29 @@
 <?php
 session_start();
-  include("config.php");
-  include("function.php");
+$hostname = "localhost";
+$username = "root";
+$password = "mysql";
+$database = "order";
+
+$con = mysqli_connect($hostname, $username, $password, $database) or die("Database connection failed.");
+
+function check_login($con)
+{
+    if (isset($_SESSION['staff_id'])) {
+        $id = $_SESSION['staff_id'];
+        $query = "select * from users where user_id = 'id' limit 1";
+
+        $result = mysqli_query($con, $query);
+        if ($result && mysqli_num_rows($result) > 0) {
+            $user_data = mysqli_fetch_assoc($result);
+            return $user_data;
+        }
+    }
+
+    //redirect to login
+    header("Location:dashboard.php");
+    die;
+}
 
   if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
@@ -12,21 +34,22 @@ session_start();
 
 
 
-      if (!empty($email) && !empty($password)) {
+      if (!empty($email)) {
 
           //read from database
-          $query = "select * from staff where email = '$email' limit 1";
+          $query = "select * from staff where staff_email = '$email' limit 1";
           $result = mysqli_query($con, $query);
 
           if ($result) {
               if ($result && mysqli_num_rows($result) > 0) {
                   $user_data = mysqli_fetch_assoc($result);
 
-                  if ($user_data['email'] === $email) {
-                      $_SESSION['id'] = $user_data['id'];
+                  if ($user_data['staff_email'] === $email) {
+                      $_SESSION['staff_id'] = $user_data['staff_id'];
                       header("Location: dashboard.php");
                       die;
                   }
+              }else {
               }
           }
       } else {

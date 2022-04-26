@@ -10,12 +10,12 @@ error_reporting(E_ALL ^ E_NOTICE);
       $password = $_POST["password"];
       $npwd = $_POST['npwd'];
 
-      $query = mysqli_query($con, "SELECT email,password from users where email = '$email' AND password ='$password'");
+      $query = mysqli_query($con, "select customer_email, customer_password from customer where customer_email = '$email' AND customer_password ='$password'");
       $num = mysqli_fetch_array($query);
 
       if ($num>0) {
         echo '<script>alert("Password successfully reset.")</script>';
-        $con = mysqli_query($con, "UPDATE users set password = '$npwd' where email = '$email'");
+        $con = mysqli_query($con, "update customer set customer_password = '$npwd' where customer_email = '$email'");
         header("Location: dashboard.php");
 
       } else {

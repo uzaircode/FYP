@@ -39,7 +39,7 @@
       <!-- <p>Nik Uzair</p> -->
 
       <p>Email</p>
-      <?php echo "{$_SESSION["id"]} <br>"; ?>
+      <?php echo "{$_SESSION["customer_email"]} <br>"; ?>
 
       <button type="button" name="button" onclick="reset()">Edit Password</button>
     </div>
@@ -47,15 +47,15 @@
     <div id="Address" class="tabcontent">
       <h2>Home Address</h2>
       <p>Store your shipping addresses here to refer back to - only recently used addresses will appear at checkout. Please note, you cannot add address lists for envelope addressing here. Please ensure you add these on the envelope page of the appropriate product.</p>
-      <p>Email</p>
+      <p>Home Adress</p>
       <?php echo "{$_SESSION["home_address"]} <br>"; ?>
-      <p>Email</p>
+      <p>City</p>
       <?php echo "{$_SESSION["city"]} <br>"; ?>
-      <p>Email</p>
+      <p>State</p>
       <?php echo "{$_SESSION["state"]} <br>"; ?>
-      <p>Email</p>
+      <p>Postcode</p>
       <?php echo "{$_SESSION["postcode"]} <br>"; ?>
-      <p>Email</p>
+      <p>phone Number</p>
       <?php echo "{$_SESSION["phone"]} <br>"; ?>
       <button type="button" name="button">Home Address</button>
     </div>

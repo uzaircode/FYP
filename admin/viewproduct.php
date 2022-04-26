@@ -92,7 +92,7 @@
                     </div>
                 </div>
 
-                <div class="customers">
+                <!-- <div class="customers">
                     <div class="card">
                     <div class="card-header">
                         <h3>Staffs</h3>
@@ -145,7 +145,7 @@
                         </div>
                     </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
       </main>

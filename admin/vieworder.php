@@ -48,7 +48,6 @@
                     <div class="card">
                     <div class="card-header">
                         <h3>Recent Order</h3>
-                        <a href="updatestatus.php">Update Status <span class="las la-arrow-right"></span></a>
                     </div>
 
                     <div class="card-body">
@@ -62,7 +61,6 @@
                                   <td>Product Name</td>
                                   <td>Quantity</td>
                                   <td>Subtotal</td>
-                                  <td>Status</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -86,7 +84,7 @@
                               $result = mysqli_query($con, $sql);
                               if (mysqli_num_rows($result) > 0) {
                                 while($row = mysqli_fetch_array($result)) {
-                                  echo "</tr><td>" . $row["order_id"] . "</td><td>" . $row["customer_email"] . "</td><td>" . $row["customer_contact"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["order_quantity"] . "</td><td>" . $row["product_price"] . "</td><td>" . $row["order_status"];
+                                  echo "</tr><td>" . $row["order_id"] . "</td><td>" . $row["customer_email"] . "</td><td>" . "0" . $row["customer_contact"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["order_quantity"] . "</td><td>" . $row["product_price"] . "</td><td>";
                                 }
                               } else {
                               }
@@ -99,7 +97,7 @@
                     </div>
                 </div>
 
-                <div class="customers">
+                <!-- <div class="customers">
                     <div class="card">
                     <div class="card-header">
                         <h3>Staffs</h3>
@@ -151,7 +149,7 @@
                         </div>
                     </div>
                     </div>
-                </div>
+                </div> -->
             </div>
       </main>
     </div>

@@ -46,7 +46,7 @@
                     <div class="card-header">
                         <h3>Recent Staff</h3>
                         <div>
-                          <a href="editstaff.php">Edit/Delete Staff <span class="las la-arrow-right"></span></a>
+                          <a href="editstaff.php">Update/Delete Staff <span class="las la-arrow-right"></span></a>
                           <a href="addstaff.php">Add Staff <span class="las la-arrow-right"></span></a>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                     </div>
                 </div>
 
-                <div class="customers">
+                <!-- <div class="customers">
                     <div class="card">
                     <div class="card-header">
                         <h3>Staffs</h3>
@@ -145,7 +145,7 @@
                     </div>
 
                     </div>
-                </div>
+                </div> -->
             </div>
 
       </main>

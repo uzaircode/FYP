@@ -38,7 +38,7 @@
                     <a href="vieworder.php"><span class="las la-shopping-bag"></span><span>Orders</span></a>
                 </li>
                 <li>
-                    <a href="viewinvoice.html" class="active"><span class="las la-receipt"></span><span>Invoices</span></a>
+                    <a href="viewinvoice.php" class="active"><span class="las la-receipt"></span><span>Invoices</span></a>
                 </li>
                 <li>
                     <a href="loginadmin.php"><span class="las la-lock"></span><span>Log Out</span></a>
@@ -82,7 +82,6 @@
                                   <td>Invoice ID</td>
                                   <td>email</td>
                                   <td>Product</td>
-                                  <td>Status</td>
                                   <td>Invoice</td>
                                 </tr>
                             </thead>
@@ -97,14 +96,13 @@
                                   die('Error ' . mysqli_connect_error());
                               }
 
-                              $sql = 'select * from invoice inner join customer on invoice.customer_id = customer.customer_id';
+                              $sql = 'select * from ((invoice inner join customer on invoice.customer_id = customer.customer_id) inner join product on invoice.product_id = product.product_id)';
 
                               $result = mysqli_query($con, $sql);
                               if (mysqli_num_rows($result) > 0) {
                                 while($row = mysqli_fetch_array($result)) {
-                                  echo "</tr><td>" . $row["invoice_id"] . "</td><td>" . $row["customer_email"] . "</td><td>" . $row["customer_contact"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["order_quantity"] . "</td><td>" . $row["product_price"] . "</td><td>" . $row["order_status"] ;
-
-                                  // echo "</tr><td>" . $row["status"] ?> <td><a href="report.php?action=add&id=<?php echo $row["id"]; ?>"><i class='bx bxs-report'></i></a></td>
+                                  echo "</tr><td>" . $row["invoice_id"] . "</td><td>" . $row["customer_email"] . "</td><td>" . $row["product_name"];
+                                  ?> <td><a href="report.php?action=add&id=<?php echo $row["invoice_id"]; ?>"><i class='bx bxs-report'></i></a></td>
                                   <?php
                                 }
                               } else {
@@ -118,7 +116,7 @@
                     </div>
                 </div>
 
-                <div class="customers">
+                <!-- <div class="customers">
                     <div class="card">
                     <div class="card-header">
                         <h3>Staffs</h3>
@@ -171,7 +169,7 @@
                     </div>
 
                     </div>
-                </div>
+                </div> -->
             </div>
 
       </main>

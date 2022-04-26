@@ -1,22 +1,4 @@
-<?php
 
-$server = "localhost";
-$username = "root";
-$password = "mysql";
-$dbname = "order";
-$conn = mysqli_connect($server, $username, $password, $dbname);
-
-$id = isset($_GET['id']) ? $_GET['id'] : '';
-$email = isset($_GET['email']) ? $_GET['email'] : '';
-$phone = isset($_GET['phone']) ? $_GET['phone'] : '';
-
-
-$sql = "select * from `order` where id='$id'";
-$result = $conn-> query($sql);
-
-$query = mysqli_query($conn, $sql);
-$row = mysqli_fetch_array($query);
-     ?>
 
 
 
@@ -59,16 +41,16 @@ $row = mysqli_fetch_array($query);
             <div class="title"> Billed to </div>
             <div class="billed-sec">
                 <div class="name">
-                  <?php echo $row["id"]; ?>
+
                 </div>
-                <p><?php echo $row["email"]; ?></p>
-                <p>+60<?php echo $row["phone"]; ?></p>
+                <p></p>
+                <!-- <p>+60<?php echo $row["phone"]; ?></p> -->
             </div>
 
 
         <div class="billed-sec">
-            <div class="sub-title">Shipping Address</div>
-            <div class="ship-add">No 6 Jalan BF 11/11 Tamam Bangun Perdana, 40900</div>
+            <div class="sub-title"></div>
+            <div class="ship-add"></div>
         </div>
      </div>
          <!--Invoice Table-->
@@ -99,7 +81,7 @@ $row = mysqli_fetch_array($query);
 
             if ($result->num_rows > 0) {
                 while ($row = $result -> fetch_assoc()) {
-                  echo "</tr><td>" . $row["id"] . "</td><td>" . $row["product"] ?>
+                  // echo "</tr><td>" . $row["id"] . "</td><td>" . $row["product"] ?>
                   <?php
                 }
             }

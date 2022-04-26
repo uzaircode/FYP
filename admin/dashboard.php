@@ -6,7 +6,9 @@
     <title>Dashboard - Paper Street</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="../css/cssfyp.css">
-    <link rel="shortcut icon" href="../images/favicon/duck.ico"/>
+    <link rel="shortcut icon" href="../images/favicon/duck.ico"
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    />
 </head>
 <body>
     <input type="checkbox" id="nav-toggle">
@@ -75,7 +77,7 @@
                     </div>
                     </div>
                 </div>
-                <div class="customers">
+                <!-- <div class="customers">
                     <div class="card">
                     <div class="card-header">
                         <h3>Staffs</h3>
@@ -126,7 +128,7 @@
                         </div>
                     </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="recent-grid">
@@ -242,13 +244,12 @@
                             <table width="100%">
                             <thead>
                                 <tr>
-                                    <td>Customer ID</td>
-                                    <td>Email</td>
-                                    <td>Phone Number</td>
-                                    <td>Product Name</td>
-                                    <td>Quantity</td>
-                                    <td>Subtotal</td>
-                                    <td>Status</td>
+                                  <td>Order ID</td>
+                                  <td>Email</td>
+                                  <td>Phone Number</td>
+                                  <td>Product Name</td>
+                                  <td>Quantity</td>
+                                  <td>Subtotal</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -265,17 +266,69 @@
                               }
 
                               mysqli_select_db($con, 'order');
-                              $sql = 'select * from product inner join `order` on product.product_id = order.product_id join customer on customer.customer_id = customer.customer_id';
+                              // $sql = 'select * from `order`';
+
+                              $sql = 'select * from ((`order` inner join customer on order.customer_id = customer.customer_id) inner join product on order.product_id = product.product_id)';
 
                               $result = mysqli_query($con, $sql);
                               if (mysqli_num_rows($result) > 0) {
                                 while($row = mysqli_fetch_array($result)) {
-                                  echo "</tr><td>" . $row["order_id"] . "</td><td>" . $row["customer_email"] . "</td><td>" . $row["customer_contact"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["order_quantity"] . "</td><td>" . $row["order_subtotal"] . "</td><td>" . $row["order_status"] ;
+                                  echo "</tr><td>" . $row["order_id"] . "</td><td>" . $row["customer_email"] . "</td><td>" . $row["customer_contact"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["order_quantity"] . "</td><td>" . $row["product_price"];
                                 }
                               } else {
                               }
                                   $con -> close();
                               ?>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-grid">
+                <div class="projects">
+                    <div class="card">
+                    <div class="card-header">
+                        <h3>Recent Invoice</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table width="100%">
+                            <thead>
+                                <tr>
+                                  <td>Invoice ID</td>
+                                  <td>email</td>
+                                  <td>Product</td>
+                                  <td>Invoice</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <?php
+                              $server = "localhost";
+                              $username = "root";
+                              $password = "mysql";
+                              $dbname = "order";
+                              $con = mysqli_connect($server, $username, $password, $dbname);
+                              if(!$con){
+                                  die('Error ' . mysqli_connect_error());
+                              }
+
+                              $sql = 'select * from ((invoice inner join customer on invoice.customer_id = customer.customer_id) inner join product on invoice.product_id = product.product_id)';
+
+                              $result = mysqli_query($con, $sql);
+                              if (mysqli_num_rows($result) > 0) {
+                                while($row = mysqli_fetch_array($result)) {
+                                  echo "</tr><td>" . $row["invoice_id"] . "</td><td>" . $row["customer_email"] . "</td><td>" . $row["product_name"];
+                                  ?> <td><a href="report.php?action=add&id=<?php echo $row["invoice_id"]; ?>"><i class='bx bxs-report'></i></a></td>
+                                  <?php
+                                }
+                              } else {
+                              }
+                                  $con -> close();
+                                   ?>
                             </tbody>
                         </table>
                         </div>
